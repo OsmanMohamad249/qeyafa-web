@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Welcome to Qeyafa",
+      "subtitle": "AI-Powered Custom Tailoring Technology",
+      "description": "Transform your fashion experience with our proprietary Computer Vision & GenAI technology. Get 3D body measurements from 2D photos with 95% accuracy.",
+      "cta": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "footer": {
+      "tagline": "Revolutionizing fashion with AI-powered precision tailoring",
+      "rights": "All rights reserved.",
+      "links": {
+        "about": "About Us",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "contact": "Contact"
+      }
+    }
+  }
+}
