@@ -86,7 +86,7 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Placeholders for logos - Replace with SVGs */}
-            {['monshaat', 'vision2030', 'saudi_made', 'techstars'].map((brandKey) => (
+            {['monshaat', 'vision2030', 'saudi_made', 'fikra'].map((brandKey) => (
               <span key={brandKey} className="text-xl font-bold text-white/60 hover:text-white transition-colors cursor-default">
                 {t(`trust.${brandKey}`)}
               </span>
