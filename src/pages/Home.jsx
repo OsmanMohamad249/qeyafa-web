@@ -1,15 +1,16 @@
 import { useTranslation } from 'react-i18next';
-import { useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import {
-  Sparkles, Smartphone,
-  ScanLine, Layers, ChevronRight, Star
+  ArrowRight, Sparkles, Zap, Shield, Smartphone,
+  ScanLine, Ruler, Layers, ChevronRight, Star, Users as UsersIcon, Clock as ClockIcon, CheckCircle as CheckCircleIcon
 } from 'lucide-react';
 import { MagneticButton } from '@/components/common/MagneticButton';
 import { GlassCard } from '@/components/common/GlassCard';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
 import NewsTicker from '@/components/common/NewsTicker';
 import { Link } from 'react-router-dom';
+import { Vision2030Logo, MonshaatLogo, SaudiMadeLogo, FikraLogo } from '@/components/common/Logos';
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -25,7 +26,7 @@ const Home = () => {
     <div ref={containerRef} className="min-h-screen bg-qeyafa-black overflow-hidden selection:bg-qeyafa-gold/30">
 
       {/* --- HERO SECTION: World-Class Impact --- */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-48 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-60 overflow-hidden">
         {/* Dynamic Background */}
         <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
@@ -84,13 +85,11 @@ const Home = () => {
           <p className="text-center text-white/30 text-sm uppercase tracking-widest mb-8 font-medium">
             {t('trust.title')}
           </p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Placeholders for logos - Replace with SVGs */}
-            {['monshaat', 'vision2030', 'saudi_made', 'fikra'].map((brandKey) => (
-              <span key={brandKey} className="text-xl font-bold text-white/60 hover:text-white transition-colors cursor-default">
-                {t(`trust.${brandKey}`)}
-              </span>
-            ))}
+          <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 items-center">
+            <MonshaatLogo className="h-12 text-white" />
+            <Vision2030Logo className="h-16 text-white" />
+            <SaudiMadeLogo className="h-12 text-white" />
+            <FikraLogo className="h-10 text-white" />
           </div>
         </div>
       </section>

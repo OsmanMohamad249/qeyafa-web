@@ -129,8 +129,7 @@ export default function Portal() {
   );
 }
 
-function StatsCard({ icon, label, value }) {
-  const Icon = icon;
+function StatsCard({ icon: IconComponent, label, value }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -138,7 +137,7 @@ function StatsCard({ icon, label, value }) {
       className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
     >
       <div className="w-10 h-10 rounded-lg bg-qeyafa-gold/20 flex items-center justify-center mb-3">
-        <Icon className="w-5 h-5 text-qeyafa-gold" />
+        <IconComponent className="w-5 h-5 text-qeyafa-gold" />
       </div>
       <p className="text-2xl font-bold text-white">{value}</p>
       <p className="text-white/50 text-sm">{label}</p>
