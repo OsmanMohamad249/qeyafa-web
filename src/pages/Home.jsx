@@ -35,8 +35,8 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 hover:border-qeyafa-gold/50 transition-colors cursor-default">
-              <Sparkles className="w-4 h-4 text-qeyafa-gold" />
-              <span className="text-sm font-medium text-white/90 tracking-wide">
+              <Star className="w-4 h-4 text-qeyafa-gold fill-qeyafa-gold" />
+              <span className="text-sm font-bold text-qeyafa-gold tracking-widest uppercase">
                 {t('hero.badge')}
               </span>
             </div>
@@ -44,12 +44,15 @@ const Home = () => {
 
           <ScrollReveal delay={0.1}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-              {t('hero.title')} <br /><span className="gradient-text">{t('hero.title_highlight')}</span>
+              {t('hero.title')} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2E5C55] via-[#4A7A6F] to-[#D4A017]">
+                {t('hero.title_highlight')}
+              </span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-[#8899A6] max-w-3xl mx-auto mb-10 leading-relaxed font-light">
               {t('hero.description')}
             </p>
           </ScrollReveal>
@@ -57,14 +60,13 @@ const Home = () => {
           <ScrollReveal delay={0.3}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/book">
-                <MagneticButton size="lg" className="min-w-[200px] shadow-gold-glow">
-                  {t('hero.cta')}
-                </MagneticButton>
+                <button className="px-8 py-4 rounded-lg bg-[#1a4d43] text-white hover:bg-[#143d35] transition-all flex items-center gap-2 font-medium min-w-[200px] justify-center">
+                  {t('hero.cta')} <ChevronRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+                </button>
               </Link>
               <Link to="/how-it-works">
-                <button className="px-8 py-4 rounded-xl border border-white/10 text-white hover:bg-white/5 transition-all flex items-center gap-2 group min-w-[200px] justify-center">
+                <button className="px-8 py-4 rounded-lg border border-white/20 text-white hover:bg-white/5 transition-all flex items-center gap-2 group min-w-[200px] justify-center font-medium">
                   <span>{t('hero.how_it_works')}</span>
-                  <ChevronRight className={`w-4 h-4 text-white/50 group-hover:text-white transition-all ${isRTL ? 'rotate-180' : ''}`} />
                 </button>
               </Link>
             </div>
