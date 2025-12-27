@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Shield, Building2 } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -14,16 +15,22 @@ const Footer = () => {
     { icon: Mail, href: '#', label: 'Email' },
   ];
 
-  const footerLinks = [
+  const companyLinks = [
     { name: t('footer.links.about'), href: '/about' },
-    { name: t('footer.links.privacy'), href: '#' },
-    { name: t('footer.links.terms'), href: '#' },
-    { name: t('footer.links.contact'), href: '/contact' },
+    { name: t('nav.careers'), href: '/careers' },
+    { name: t('footer.links.news'), href: '#' },
   ];
 
-  const portalLinks = [
-    { name: 'Admin Dashboard', href: '/admin', icon: Shield },
-    { name: 'Agency Portal', href: '/agency', icon: Building2 },
+  const ecosystemLinks = [
+    { name: t('nav.hub_partners'), href: '/hub/partners' },
+    { name: t('nav.hub_suppliers'), href: '/hub/suppliers' },
+    { name: t('nav.services_b2b'), href: '/services/b2b' },
+  ];
+
+  const supportLinks = [
+    { name: t('footer.links.help'), href: '#' },
+    { name: t('footer.links.privacy'), href: '#' },
+    { name: t('footer.links.terms'), href: '#' },
   ];
 
   return (
@@ -32,24 +39,36 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <motion.h3
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-2xl font-bold gradient-text"
             >
-              Qeyafa
-            </motion.h3>
+              <img src={logo} alt="Qeyafa Logo" className="h-32 w-auto object-contain mix-blend-screen" />
+            </motion.div>
             <p className="text-white/60 text-sm leading-relaxed">
               {t('footer.tagline')}
             </p>
+            <div className="flex space-x-4 rtl:space-x-reverse pt-4">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-200 border border-white/5 hover:border-qeyafa-gold/30"
+                >
+                  <social.icon className="w-4 h-4 text-white/70" />
+                </motion.a>
+              ))}
+            </div>
           </div>
 
-          {/* Links Section */}
+          {/* Company Section */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white">{t('footer.company')}</h4>
             <ul className="space-y-2">
-              {footerLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
@@ -62,57 +81,54 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Portal Links Section */}
+          {/* Ecosystem Section */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Portals</h4>
+            <h4 className="text-lg font-semibold text-white">{t('footer.ecosystem')}</h4>
             <ul className="space-y-2">
-              {portalLinks.map((link) => (
+              {ecosystemLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/60 hover:text-qeyafa-gold transition-colors duration-200 text-sm flex items-center gap-2"
+                    className="text-white/60 hover:text-qeyafa-gold transition-colors duration-200 text-sm"
                   >
-                    <link.icon className="w-4 h-4" />
                     {link.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/careers"
-                  className="text-white/60 hover:text-qeyafa-gold transition-colors duration-200 text-sm"
-                >
-                  Careers
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Social Links Section */}
+          {/* Support Section */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Connect With Us</h4>
-            <div className="flex space-x-4 rtl:space-x-reverse">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-200 border border-white/5 hover:border-qeyafa-gold/30"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5 text-white/60 hover:text-qeyafa-gold transition-colors" />
-                </motion.a>
+            <h4 className="text-lg font-semibold text-white">{t('footer.support')}</h4>
+            <ul className="space-y-2">
+              {supportLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-white/60 hover:text-qeyafa-gold transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-center text-white/40 text-sm">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/40 text-sm">
             © {currentYear} Qeyafa. {t('footer.rights')}
           </p>
+          <div className="flex items-center gap-4">
+             {/* Badges placeholders */}
+             <div className="px-3 py-1 bg-white/5 rounded border border-white/10 text-xs text-white/60">
+               {t('footer.saudi_made')}
+             </div>
+             <div className="px-3 py-1 bg-white/5 rounded border border-white/10 text-xs text-white/60">
+               {t('footer.monshaat')}
+             </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -11,10 +11,10 @@ export function GlowInput({ label, error, ...props }) {
           absolute left-4 transition-all duration-300 pointer-events-none
           ${isFocused || props.value 
             ? 'top-1 text-xs text-qeyafa-gold' 
-            : 'top-4 text-gray-400'}
+            : 'top-4 text-white/40'}
         `}
         animate={{
-          color: isFocused ? '#D4A017' : error ? '#EF4444' : '#9CA3AF'
+          color: isFocused ? '#D4A017' : error ? '#EF4444' : 'rgba(255,255,255,0.4)'
         }}
       >
         {label}

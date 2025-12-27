@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export function QuestionCard({ question, answer, onAnswer, questionNumber, totalQuestions }) {
+export function QuestionCard({ question, answer, onAnswer, questionNumber: _questionNumber, totalQuestions: _totalQuestions }) {
   const isMultipleChoice = question.options && question.options.length > 0;
 
   return (

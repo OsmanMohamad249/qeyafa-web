@@ -55,7 +55,7 @@ export function OTPVerification({ email, onVerified, onResend }) {
       // Simulate verification (in production, check against Firebase)
       onVerified?.(code);
 
-    } catch (err) {
+    } catch {
       setError('Invalid code. Please try again.');
     } finally {
       setIsVerifying(false);

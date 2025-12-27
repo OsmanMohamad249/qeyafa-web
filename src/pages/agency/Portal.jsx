@@ -55,7 +55,7 @@ const DEMO_CANDIDATES = [
 ];
 
 export default function Portal() {
-  const { user } = useAuthStore();
+  useAuthStore();
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -129,7 +129,8 @@ export default function Portal() {
   );
 }
 
-function StatsCard({ icon: Icon, label, value }) {
+function StatsCard({ icon, label, value }) {
+  const Icon = icon;
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

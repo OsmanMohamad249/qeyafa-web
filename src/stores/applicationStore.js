@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export const useApplicationStore = create((set, get) => ({
+export const useApplicationStore = create((set) => ({
   // Current step (1-4)
   currentStep: 1,
 

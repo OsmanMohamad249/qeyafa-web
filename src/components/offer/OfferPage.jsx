@@ -25,15 +25,10 @@ const DEMO_OFFER = {
   ]
 };
 
-export function OfferPage({ offerId }) {
-  const [offer, setOffer] = useState(DEMO_OFFER);
+export function OfferPage({ offerId: _offerId }) {
+  const [offer] = useState(DEMO_OFFER);
   const [showRejectModal, setShowRejectModal] = useState(false);
   const [isAccepted, setIsAccepted] = useState(false);
-
-  // Fire gold confetti on page load
-  useEffect(() => {
-    fireGoldConfetti();
-  }, []);
 
   const fireGoldConfetti = () => {
     confetti({
@@ -43,6 +38,11 @@ export function OfferPage({ offerId }) {
       colors: ['#D4A017', '#F0D78C', '#0F4D3F', '#FFFFFF']
     });
   };
+
+  // Fire gold confetti on page load
+  useEffect(() => {
+    fireGoldConfetti();
+  }, []);
 
   const handleAccept = () => {
     fireGoldConfetti();
@@ -179,14 +179,14 @@ export function OfferPage({ offerId }) {
       {showRejectModal && (
         <RejectModal
           onClose={() => setShowRejectModal(false)}
-          offerId={offerId}
+          offerId={_offerId}
         />
       )}
     </div>
   );
 }
 
-function RejectModal({ onClose, offerId }) {
+function RejectModal({ onClose, offerId: _offerId }) {
   const [reason, setReason] = useState('');
   const [showSalaryInput, setShowSalaryInput] = useState(false);
   const [expectedSalary, setExpectedSalary] = useState('');

@@ -27,7 +27,7 @@ export function useAntiCheat({ assessmentId, onTerminate }) {
     }, 5000);
   }, []);
 
-  const logCheatEvent = useCallback(async (eventType, actionTaken) => {
+  const logCheatEvent = useCallback(async (eventType, _actionTaken) => {
     if (!assessmentId) return;
 
     try {

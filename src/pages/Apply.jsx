@@ -8,7 +8,7 @@ import { CheckCircle, Copy, ExternalLink } from 'lucide-react';
 
 export default function Apply() {
   const { jobId } = useParams();
-  const { isSubmitted, trackingToken, magicLink, reset } = useApplicationStore();
+  const { isSubmitted, magicLink, reset } = useApplicationStore();
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {

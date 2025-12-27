@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlassCard } from '@/components/common/GlassCard';
@@ -96,8 +95,8 @@ export default function Careers() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <MagneticButton onClick={() => document.getElementById('jobs').scrollIntoView({ behavior: 'smooth' })}>
-              View Open Positions <ArrowRight className="w-4 h-4 ml-2" />
+            <MagneticButton onClick={() => window.location.assign('/careers/apply')}>
+              Access QTME Portal <ArrowRight className="w-4 h-4 ml-2" />
             </MagneticButton>
           </motion.div>
         </div>

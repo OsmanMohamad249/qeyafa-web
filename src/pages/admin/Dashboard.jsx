@@ -54,9 +54,9 @@ const DEMO_CANDIDATES = [
 ];
 
 export default function Dashboard() {
-  const { user } = useAuthStore();
-  const [stats, setStats] = useState(DEMO_STATS);
-  const [candidates, setCandidates] = useState(DEMO_CANDIDATES);
+  useAuthStore();
+  const [stats] = useState(DEMO_STATS);
+  const [candidates] = useState(DEMO_CANDIDATES);
   const [selectedTab, setSelectedTab] = useState('pending_review');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -187,7 +187,8 @@ export default function Dashboard() {
   );
 }
 
-function StatsCard({ icon: Icon, label, value, color }) {
+function StatsCard({ icon, label, value, color }) {
+  const Icon = icon;
   const colors = {
     blue: 'bg-blue-500/20 text-blue-400',
     yellow: 'bg-yellow-500/20 text-yellow-400',

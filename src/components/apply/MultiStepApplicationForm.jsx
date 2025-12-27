@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useApplicationStore } from '@/stores/applicationStore';
 import { GlowInput } from '@/components/common/GlowInput';
 import { MagneticButton } from '@/components/common/MagneticButton';
 import { Check, Upload, ArrowLeft, ArrowRight, Loader2 } from 'lucide-react';
+import { checkBudget } from '@/lib/qtme';
 
 // Step indicators
 function StepIndicator({ currentStep }) {
+  const { t } = useTranslation();
   const steps = [
-    { num: 1, label: 'Personal' },
-    { num: 2, label: 'Professional' },
-    { num: 3, label: 'Portfolio' },
-    { num: 4, label: 'CV Upload' }
+    { num: 1, label: t('application_form.steps.personal') },
+    { num: 2, label: t('application_form.steps.professional') },
+    { num: 3, label: t('application_form.steps.portfolio') },
+    { num: 4, label: t('application_form.steps.cv') }
   ];
 
   return (
@@ -46,16 +49,17 @@ function StepIndicator({ currentStep }) {
 
 // Step 1: Personal Information
 function Step1({ formData, updateFormData, onNext }) {
+  const { t } = useTranslation();
   const [errors, setErrors] = useState({});
 
   const validate = () => {
     const newErrors = {};
-    if (!formData.full_name.trim()) newErrors.full_name = 'Name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    if (!formData.full_name.trim()) newErrors.full_name = t('application_form.errors.name_required');
+    if (!formData.email.trim()) newErrors.email = t('application_form.errors.email_required');
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Invalid email format';
+      newErrors.email = t('application_form.errors.email_invalid');
     }
-    if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
+    if (!formData.phone.trim()) newErrors.phone = t('application_form.errors.phone_required');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -67,17 +71,17 @@ function Step1({ formData, updateFormData, onNext }) {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-white mb-6">Personal Information</h2>
+      <h2 className="text-2xl font-semibold text-white mb-6">{t('application_form.personal.title')}</h2>
 
       <GlowInput
-        label="Full Name"
+        label={t('application_form.personal.full_name')}
         value={formData.full_name}
         onChange={(e) => updateFormData({ full_name: e.target.value })}
         error={errors.full_name}
       />
 
       <GlowInput
-        label="Email Address"
+        label={t('application_form.personal.email')}
         type="email"
         value={formData.email}
         onChange={(e) => updateFormData({ email: e.target.value })}
@@ -85,7 +89,7 @@ function Step1({ formData, updateFormData, onNext }) {
       />
 
       <GlowInput
-        label="Phone Number"
+        label={t('application_form.personal.phone')}
         type="tel"
         value={formData.phone}
         onChange={(e) => updateFormData({ phone: e.target.value })}
@@ -95,7 +99,7 @@ function Step1({ formData, updateFormData, onNext }) {
 
       <div className="flex justify-end pt-4">
         <MagneticButton onClick={handleNext}>
-          Next Step <ArrowRight className="w-4 h-4 ml-2" />
+          {t('application_form.buttons.next')} <ArrowRight className="w-4 h-4 ml-2" />
         </MagneticButton>
       </div>
     </div>
@@ -104,12 +108,13 @@ function Step1({ formData, updateFormData, onNext }) {
 
 // Step 2: Professional Details
 function Step2({ formData, updateFormData, onNext, onPrev }) {
+  const { t } = useTranslation();
   const [errors, setErrors] = useState({});
 
   const validate = () => {
     const newErrors = {};
-    if (!formData.current_salary) newErrors.current_salary = 'Current salary is required';
-    if (!formData.expected_salary) newErrors.expected_salary = 'Expected salary is required';
+    if (!formData.current_salary) newErrors.current_salary = t('application_form.errors.current_salary_required');
+    if (!formData.expected_salary) newErrors.expected_salary = t('application_form.errors.expected_salary_required');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -121,11 +126,11 @@ function Step2({ formData, updateFormData, onNext, onPrev }) {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-white mb-6">Professional Details</h2>
+      <h2 className="text-2xl font-semibold text-white mb-6">{t('application_form.professional.title')}</h2>
 
       <div className="grid grid-cols-2 gap-4">
         <GlowInput
-          label="Current Salary (Monthly)"
+          label={t('application_form.professional.current_salary')}
           type="number"
           value={formData.current_salary}
           onChange={(e) => updateFormData({ current_salary: e.target.value })}
@@ -133,7 +138,7 @@ function Step2({ formData, updateFormData, onNext, onPrev }) {
         />
 
         <div>
-          <label className="block text-sm text-white/70 mb-2">Currency</label>
+          <label className="block text-sm text-white/70 mb-2">{t('application_form.professional.currency')}</label>
           <select
             value={formData.currency}
             onChange={(e) => updateFormData({ currency: e.target.value })}
@@ -147,7 +152,7 @@ function Step2({ formData, updateFormData, onNext, onPrev }) {
       </div>
 
       <GlowInput
-        label="Expected Salary (Monthly)"
+        label={t('application_form.professional.expected_salary')}
         type="number"
         value={formData.expected_salary}
         onChange={(e) => updateFormData({ expected_salary: e.target.value })}
@@ -155,26 +160,26 @@ function Step2({ formData, updateFormData, onNext, onPrev }) {
       />
 
       <div>
-        <label className="block text-sm text-white/70 mb-2">Notice Period (Days)</label>
+        <label className="block text-sm text-white/70 mb-2">{t('application_form.professional.notice_period')}</label>
         <select
           value={formData.notice_period}
           onChange={(e) => updateFormData({ notice_period: parseInt(e.target.value) })}
           className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white focus:border-qeyafa-gold focus:outline-none"
         >
-          <option value={0}>Immediate</option>
-          <option value={15}>15 Days</option>
-          <option value={30}>30 Days</option>
-          <option value={60}>60 Days</option>
-          <option value={90}>90 Days</option>
+          <option value={0}>{t('application_form.professional.notice_options.immediate')}</option>
+          <option value={15}>{t('application_form.professional.notice_options.days_15')}</option>
+          <option value={30}>{t('application_form.professional.notice_options.days_30')}</option>
+          <option value={60}>{t('application_form.professional.notice_options.days_60')}</option>
+          <option value={90}>{t('application_form.professional.notice_options.days_90')}</option>
         </select>
       </div>
 
       <div className="flex justify-between pt-4">
         <button onClick={onPrev} className="text-white/70 hover:text-white flex items-center">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Previous
+          <ArrowLeft className="w-4 h-4 mr-2" /> {t('application_form.buttons.prev')}
         </button>
         <MagneticButton onClick={handleNext}>
-          Next Step <ArrowRight className="w-4 h-4 ml-2" />
+          {t('application_form.buttons.next')} <ArrowRight className="w-4 h-4 ml-2" />
         </MagneticButton>
       </div>
     </div>
@@ -183,13 +188,14 @@ function Step2({ formData, updateFormData, onNext, onPrev }) {
 
 // Step 3: Links & Portfolio
 function Step3({ formData, updateFormData, onNext, onPrev }) {
+  const { t } = useTranslation();
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-white mb-6">Links & Portfolio</h2>
-      <p className="text-white/60 text-sm mb-4">Optional but highly recommended</p>
+      <h2 className="text-2xl font-semibold text-white mb-6">{t('application_form.portfolio.title')}</h2>
+      <p className="text-white/60 text-sm mb-4">{t('application_form.portfolio.subtitle')}</p>
 
       <GlowInput
-        label="GitHub URL"
+        label={t('application_form.portfolio.github')}
         type="url"
         value={formData.github_url}
         onChange={(e) => updateFormData({ github_url: e.target.value })}
@@ -197,7 +203,7 @@ function Step3({ formData, updateFormData, onNext, onPrev }) {
       />
 
       <GlowInput
-        label="LinkedIn URL"
+        label={t('application_form.portfolio.linkedin')}
         type="url"
         value={formData.linkedin_url}
         onChange={(e) => updateFormData({ linkedin_url: e.target.value })}
@@ -205,7 +211,7 @@ function Step3({ formData, updateFormData, onNext, onPrev }) {
       />
 
       <GlowInput
-        label="Portfolio URL"
+        label={t('application_form.portfolio.portfolio')}
         type="url"
         value={formData.portfolio_url}
         onChange={(e) => updateFormData({ portfolio_url: e.target.value })}
@@ -214,10 +220,10 @@ function Step3({ formData, updateFormData, onNext, onPrev }) {
 
       <div className="flex justify-between pt-4">
         <button onClick={onPrev} className="text-white/70 hover:text-white flex items-center">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Previous
+          <ArrowLeft className="w-4 h-4 mr-2" /> {t('application_form.buttons.prev')}
         </button>
         <MagneticButton onClick={onNext}>
-          Next Step <ArrowRight className="w-4 h-4 ml-2" />
+          {t('application_form.buttons.next')} <ArrowRight className="w-4 h-4 ml-2" />
         </MagneticButton>
       </div>
     </div>
@@ -226,6 +232,7 @@ function Step3({ formData, updateFormData, onNext, onPrev }) {
 
 // Step 4: CV Upload
 function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
+  const { t } = useTranslation();
   const [dragOver, setDragOver] = useState(false);
   const [error, setError] = useState('');
 
@@ -234,13 +241,13 @@ function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
 
     // Validate file type
     if (file.type !== 'application/pdf') {
-      setError('Please upload a PDF file');
+      setError(t('application_form.errors.pdf_only'));
       return;
     }
 
     // Validate file size (5MB max)
     if (file.size > 5 * 1024 * 1024) {
-      setError('File size must be less than 5MB');
+      setError(t('application_form.errors.file_size'));
       return;
     }
 
@@ -257,7 +264,7 @@ function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
 
   const handleSubmit = () => {
     if (!formData.cv_file) {
-      setError('Please upload your CV');
+      setError(t('application_form.errors.cv_required'));
       return;
     }
     onSubmit();
@@ -265,7 +272,7 @@ function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-white mb-6">Upload Your CV</h2>
+      <h2 className="text-2xl font-semibold text-white mb-6">{t('application_form.cv.title')}</h2>
 
       <div
         className={`
@@ -294,13 +301,13 @@ function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
           <div className="text-green-400">
             <Check className="w-12 h-12 mx-auto mb-4" />
             <p className="font-medium">{formData.cv_file.name}</p>
-            <p className="text-sm text-white/50 mt-2">Click to change file</p>
+            <p className="text-sm text-white/50 mt-2">{t('application_form.cv.change')}</p>
           </div>
         ) : (
           <div className="text-white/70">
             <Upload className="w-12 h-12 mx-auto mb-4" />
-            <p className="font-medium">Drag & drop your CV here</p>
-            <p className="text-sm text-white/50 mt-2">or click to browse (PDF, max 5MB)</p>
+            <p className="font-medium">{t('application_form.cv.drag_drop')}</p>
+            <p className="text-sm text-white/50 mt-2">{t('application_form.cv.browse')}</p>
           </div>
         )}
       </div>
@@ -311,15 +318,15 @@ function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
 
       <div className="flex justify-between pt-4">
         <button onClick={onPrev} className="text-white/70 hover:text-white flex items-center">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Previous
+          <ArrowLeft className="w-4 h-4 mr-2" /> {t('application_form.buttons.prev')}
         </button>
         <MagneticButton onClick={handleSubmit} disabled={isSubmitting}>
           {isSubmitting ? (
             <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting...
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" /> {t('application_form.buttons.submitting')}
             </>
           ) : (
-            'Submit Application'
+            t('application_form.buttons.submit')
           )}
         </MagneticButton>
       </div>
@@ -328,7 +335,8 @@ function Step4({ formData, updateFormData, onPrev, onSubmit, isSubmitting }) {
 }
 
 // Main Multi-Step Form Component
-export function MultiStepApplicationForm({ jobId, jobTitle, onSuccess }) {
+export function MultiStepApplicationForm({ jobId: _jobId, jobTitle: _jobTitle, onSuccess }) {
+  const { t } = useTranslation();
   const {
     currentStep,
     formData,
@@ -345,6 +353,12 @@ export function MultiStepApplicationForm({ jobId, jobTitle, onSuccess }) {
     setSubmitting(true);
 
     try {
+      // Budget Check (Silent)
+      // In a real app, fetch job budget from DB. Here we simulate a range.
+      const jobBudgetRange = { min: 15000, max: 25000 };
+      const budgetCheckResult = checkBudget(Number(formData.expected_salary), jobBudgetRange);
+      console.log('Budget Check Result:', budgetCheckResult);
+
       // Generate tracking token
       const trackingToken = crypto.randomUUID ? crypto.randomUUID() :
         'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
@@ -364,7 +378,7 @@ export function MultiStepApplicationForm({ jobId, jobTitle, onSuccess }) {
 
     } catch (error) {
       console.error('Application submission error:', error);
-      setError('Failed to submit application. Please try again.');
+      setError(t('application_form.errors.submit_failed'));
     }
   };
 
@@ -419,4 +433,3 @@ export function MultiStepApplicationForm({ jobId, jobTitle, onSuccess }) {
     </div>
   );
 }
-

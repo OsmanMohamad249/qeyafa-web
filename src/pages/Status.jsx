@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getStatusInfo } from '@/lib/qtme';
-import { Clock, MapPin, DollarSign, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 // Demo status for preview
 const DEMO_CANDIDATE = {
@@ -36,7 +36,7 @@ export default function Status() {
 
         // Demo data
         setCandidate(DEMO_CANDIDATE);
-      } catch (err) {
+      } catch {
         setError('Unable to find your application. Please check the link.');
       } finally {
         setIsLoading(false);

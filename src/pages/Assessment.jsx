@@ -84,7 +84,7 @@ export default function Assessment() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
-  const [candidateEmail, setCandidateEmail] = useState('candidate@example.com');
+  const candidateEmail = 'candidate@example.com';
 
   // Initialize assessment with demo data
   useEffect(() => {
@@ -118,24 +118,7 @@ export default function Assessment() {
     return () => clearInterval(timer);
   }, [status, decrementTime]);
 
-  // Auto-submit when time runs out
-  useEffect(() => {
-    if (timeRemaining === 0 && status === 'in_progress') {
-      handleSubmit();
-    }
-  }, [timeRemaining, status]);
-
-  const handleOtpVerified = (code) => {
-    setOtpVerified(true);
-    startAssessment();
-  };
-
-  const handleAnswer = useCallback((answer) => {
-    const currentQuestion = questions[currentQuestionIndex];
-    saveAnswer(currentQuestion.id, answer);
-  }, [questions, currentQuestionIndex, saveAnswer]);
-
-  const handleSubmit = async () => {
+  const handleSubmit = useCallback(async () => {
     setIsSubmitting(true);
 
     // Simulate submission
@@ -144,7 +127,24 @@ export default function Assessment() {
     submitAssessment();
     setIsSubmitting(false);
     setShowSubmitConfirm(false);
+  }, [submitAssessment]);
+
+  // Auto-submit when time runs out
+  useEffect(() => {
+    if (timeRemaining === 0 && status === 'in_progress') {
+      setTimeout(() => handleSubmit(), 0);
+    }
+  }, [timeRemaining, status, handleSubmit]);
+
+  const handleOtpVerified = (_code) => {
+    setOtpVerified(true);
+    startAssessment();
   };
+
+  const handleAnswer = useCallback((answer) => {
+    const currentQuestion = questions[currentQuestionIndex];
+    saveAnswer(currentQuestion.id, answer);
+  }, [questions, currentQuestionIndex, saveAnswer]);
 
   const answeredCount = Object.keys(answers).length;
   const progress = (answeredCount / questions.length) * 100;

@@ -1,5 +1,5 @@
 import { db } from '../firebase/config';
-import { collection, doc, getDoc, getDocs, query, where, orderBy, limit, addDoc, updateDoc, Timestamp } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where, orderBy, limit, addDoc, Timestamp } from 'firebase/firestore';
 
 /**
  * @typedef {Object} Job
@@ -102,9 +102,9 @@ export const jobsService = {
 
   /**
    * Increment view count
-   * @param {string} id
+   * @param {string} _id
    */
-  incrementViews: async (id) => {
+  incrementViews: async (_id) => {
     // Note: In a real app, use increment() from firestore
     // keeping it simple for now or use a cloud function
     // const docRef = doc(db, COLLECTION_NAME, id);

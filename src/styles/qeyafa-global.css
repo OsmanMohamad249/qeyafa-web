@@ -1,0 +1,354 @@
+/*
+ * Qeyafa AI - Extended Global Styles
+ * Additional luxury components and utilities
+ */
+
+/* ===== Hero Section Styles ===== */
+.hero-luxury {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-luxury::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(15, 77, 63, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-luxury::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(15, 77, 63, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 77, 63, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ===== Typography Styles ===== */
+.heading-luxury {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.heading-xl {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.heading-md {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.subheading-luxury {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--color-qeyafa-gold, #D4A017);
+}
+
+/* ===== Animated Border ===== */
+.animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--color-qeyafa-gold, #D4A017) 50%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: border-flow 3s linear infinite;
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* ===== Floating Elements ===== */
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-element-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* ===== Glow Effects ===== */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center,
+    rgba(15, 77, 63, 0.2) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glow-effect:hover::after {
+  opacity: 1;
+}
+
+.glow-gold-effect::after {
+  background: radial-gradient(ellipse at center,
+    rgba(212, 160, 23, 0.2) 0%,
+    transparent 70%
+  );
+}
+
+/* ===== Image Treatments ===== */
+.image-luxury {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-luxury::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 60%,
+    rgba(2, 13, 10, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.image-luxury img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.image-luxury:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== Dividers ===== */
+.divider-luxury {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(15, 77, 63, 0.5) 50%,
+    transparent 100%
+  );
+}
+
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 160, 23, 0.5) 50%,
+    transparent 100%
+  );
+}
+
+/* ===== Stats & Numbers ===== */
+.stat-number {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #D4A017 0%, #fde047 50%, #D4A017 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== Form Inputs ===== */
+.input-luxury {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(15, 77, 63, 0.3);
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-luxury::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input-luxury:focus {
+  outline: none;
+  border-color: var(--color-qeyafa-gold, #D4A017);
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.15);
+}
+
+/* ===== Tags & Badges ===== */
+.badge-luxury {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: rgba(15, 77, 63, 0.2);
+  border: 1px solid rgba(15, 77, 63, 0.3);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #5fe8bc;
+}
+
+.badge-gold {
+  background: rgba(212, 160, 23, 0.2);
+  border-color: rgba(212, 160, 23, 0.3);
+  color: #fde047;
+}
+
+/* ===== Tooltips ===== */
+.tooltip-luxury {
+  position: relative;
+}
+
+.tooltip-luxury::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.5rem 1rem;
+  background: rgba(2, 13, 10, 0.95);
+  border: 1px solid rgba(15, 77, 63, 0.3);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.tooltip-luxury:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Loading States ===== */
+.skeleton-luxury {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 77, 63, 0.1) 0%,
+    rgba(15, 77, 63, 0.2) 50%,
+    rgba(15, 77, 63, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===== Navigation Active States ===== */
+.nav-link-luxury {
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.nav-link-luxury::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-qeyafa-gold, #D4A017);
+  transition: width 0.3s ease;
+}
+
+.nav-link-luxury:hover,
+.nav-link-luxury.active {
+  color: white;
+}
+
+.nav-link-luxury:hover::after,
+.nav-link-luxury.active::after {
+  width: 100%;
+}
+
+/* ===== Page Transitions ===== */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .btn-luxury,
+  .btn-gold,
+  .btn-outline {
+    background: white !important;
+    border: 1px solid black !important;
+    color: black !important;
+  }
+
+  .card-luxury,
+  .card-glass {
+    background: white !important;
+    border: 1px solid #ccc !important;
+  }
+}
+

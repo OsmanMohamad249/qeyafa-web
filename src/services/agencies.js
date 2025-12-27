@@ -1,5 +1,5 @@
 import { db } from '../firebase/config';
-import { collection, doc, getDoc, getDocs, query, where, limit, addDoc, updateDoc, Timestamp } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where, limit, updateDoc, Timestamp } from 'firebase/firestore';
 
 /**
  * @typedef {Object} Agency

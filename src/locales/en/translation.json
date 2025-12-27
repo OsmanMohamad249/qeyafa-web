@@ -2,26 +2,292 @@
   "translation": {
     "nav": {
       "home": "Home",
-      "about": "About",
-      "services": "Services",
+      "about": "About Qeyafa",
+      "services": "Our Services",
+      "services_individual": "Individual Tailoring",
+      "services_b2b": "B2B Solutions",
+      "services_repair": "Alterations & Repair",
+      "ecosystem": "Ecosystem",
+      "hub": "The Qeyafa Hub",
+      "hub_customer": "Customer App",
+      "hub_partners": "Partner Portal",
+      "hub_suppliers": "Fabric Supplier Hub",
+      "join": "Join the Network",
+      "join_tailors": "For Tailors",
+      "join_suppliers": "For Suppliers",
+      "join_logistics": "For Logistics",
       "careers": "Careers",
-      "contact": "Contact"
+      "contact": "Contact",
+      "book_measurement": "Book a Measurement",
+      "qtme": "QTME (Careers)"
     },
     "hero": {
-      "title": "Welcome to Qeyafa",
-      "subtitle": "AI-Powered Custom Tailoring Technology",
-      "description": "Transform your fashion experience with our proprietary Computer Vision & GenAI technology. Get 3D body measurements from 2D photos with 95% accuracy.",
-      "cta": "Get Started",
+      "badge": "The Future of Digital Tailoring",
+      "title": "Custom Tailoring: AI Precision Meets Traditional Craftsmanship",
+      "title_highlight": "",
+      "subtitle": "Qeyafa is an innovative tech platform transforming your photos into accurate 3D models to ensure the Perfect Fit and solve sizing issues forever.",
+      "description": "Qeyafa is an innovative tech platform transforming your photos into accurate 3D models to ensure the Perfect Fit and solve sizing issues forever. An integrated platform merging proprietary Computer Vision with a network of skilled tailors, empowering individuals with custom designs and businesses with uniform solutions.",
+      "stats": "96% Accuracy | 20+ Measurement Points | 360° Virtual Try-on",
+      "cta": "Start Your Experience",
+      "how_it_works": "How it Works",
       "learnMore": "Learn More"
     },
+    "about": {
+      "hero": {
+        "title": "About Qeyafa",
+        "subtitle": "Innovating the future of elegance, with algorithmic precision."
+      },
+      "intro": {
+        "title": "Who We Are",
+        "desc": "Qeyafa is a leading Saudi tech company founded to redefine the custom fashion experience. We merge traditional tailoring authenticity with cutting-edge AI and Computer Vision to deliver perfect fit and superior quality for everyone."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "desc": "To be the Global Leading Ecosystem for custom tailoring, transforming the experience from a complex traditional process into a seamless, precise, and sustainable digital journey."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "desc": "Empowering individuals to express their identity through custom designs, and enabling local artisans to reach a global audience via an integrated tech platform."
+      },
+      "values": {
+        "title": "Our Values",
+        "precision": "AI Precision: 99% accuracy, zero errors.",
+        "sustainability": "Zero-Waste: Made-to-measure means no inventory waste.",
+        "empowerment": "Empowerment: Supporting local Saudi designers and SMEs.",
+        "efficiency": "Efficiency: Fast turnaround from measurement to delivery."
+      }
+    },
+    "features": {
+      "engine": {
+        "title": "Proprietary Computer Vision Engine",
+        "desc": "We don't use traditional tools. Our tech converts 4 photos (front, back, side) into a precise 3D parametric model."
+      },
+      "marketplace": {
+        "title": "Dual-Sided Marketplace",
+        "desc": "Empowering local designers and tailors to reach a massive customer base through our integrated tech platform."
+      }
+    },
+    "market": {
+      "stats": "Targeting the $6.5B custom tailoring market in KSA, aiming to capture 460M SAR market share within 5 years."
+    },
     "footer": {
-      "tagline": "Revolutionizing fashion with AI-powered precision tailoring",
+      "tagline": "Leading the fashion-tech transformation.",
       "rights": "All rights reserved.",
+      "company": "Company",
+      "ecosystem": "Ecosystem",
+      "support": "Support",
+      "saudi_made": "Saudi Made",
+      "monshaat": "Monsha'at",
       "links": {
         "about": "About Us",
+        "news": "News / Blog",
+        "help": "Help Center",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service",
         "contact": "Contact"
+      }
+    },
+    "home": {
+      "hero": {
+        "title": "Perfect Fit, Powered by AI. Zero Waste, Powered by You.",
+        "subtitle": "Experience the future of fashion with our ecosystem.",
+        "cta": "Start Your Experience",
+        "learnMore": "Learn More"
+      },
+      "impact": {
+        "clients": "Active Clients",
+        "scans": "AI Scans",
+        "partners": "Partner Ateliers",
+        "fabric": "Fabric Saved (m)"
+      },
+      "ecosystem": {
+        "title": "The Qeyafa Ecosystem",
+        "customer": {
+          "title": "Customer",
+          "desc": "Get perfect fit clothing with AI measurements."
+        },
+        "business": {
+          "title": "Business",
+          "desc": "Uniform solutions for your workforce."
+        },
+        "tailor": {
+          "title": "Tailor",
+          "desc": "Access a global customer base and smart tools."
+        },
+        "supplier": {
+          "title": "Supplier",
+          "desc": "Connect directly with tailors and customers."
+        }
+      }
+    },
+    "partner_landing": {
+      "hero": {
+        "title": "Grow Your Atelier with AI Precision",
+        "subtitle": "Join the Qeyafa network and receive ready-to-sew orders with perfect measurements.",
+        "cta": "Register Your Atelier"
+      },
+      "features": {
+        "orders": {
+          "title": "Receive Ready Orders",
+          "desc": "No more marketing needed; we send you confirmed orders."
+        },
+        "bim": {
+          "title": "BIM Data Access",
+          "desc": "Receive precise 3D measurements, reducing alterations to near zero."
+        },
+        "capacity": {
+          "title": "Capacity Management",
+          "desc": "Control your workload with a smart dashboard."
+        }
+      }
+    },
+    "supplier_landing": {
+      "hero": {
+        "title": "Digitize Your Fabric Inventory",
+        "subtitle": "Connect directly with customers and tailors to sell your premium fabrics.",
+        "cta": "Become a Certified Supplier"
+      },
+      "features": {
+        "direct": {
+          "title": "Direct-to-Customer",
+          "desc": "Sell fabrics directly to clients through the app."
+        },
+        "inventory": {
+          "title": "Real-time Inventory",
+          "desc": "Sync your stock levels automatically."
+        },
+        "waste": {
+          "title": "Zero Waste",
+          "desc": "Sell exact meters based on AI calculation."
+        }
+      }
+    },
+    "corporate_landing": {
+      "hero": {
+        "title": "Employee Uniforms, Managed on Autopilot",
+        "subtitle": "Streamline your corporate uniform process with AI sizing and automated logistics.",
+        "cta": "Schedule a Corporate Demo"
+      },
+      "features": {
+        "remote": {
+          "title": "Remote Measurement",
+          "desc": "Employees scan themselves at home; no need for on-site tailors."
+        },
+        "billing": {
+          "title": "Unified Billing",
+          "desc": "One monthly invoice for all staff orders."
+        },
+        "consistency": {
+          "title": "Consistency",
+          "desc": "Guarantee the same look and fit for everyone."
+        }
+      }
+    },
+    "qtme": {
+      "hero": {
+        "title": "Welcome to QTME: The Engine Behind Qeyafa.",
+        "subtitle": "Where Silicon Valley Tech meets Saudi Heritage.",
+        "cta": "Access QTME Portal"
+      },
+      "roles": {
+        "title": "Founding Partner Opportunities",
+        "cto": {
+          "title": "Chief Technology Officer",
+          "desc": "Lead the Computer Vision Engine."
+        },
+        "coo": {
+          "title": "Chief Operating Officer",
+          "desc": "Orchestrate the Supply Chain."
+        },
+        "cmo": {
+          "title": "Chief Marketing Officer",
+          "desc": "Drive the Digital Growth."
+        }
+      },
+      "culture": {
+        "title": "Culture & DNA",
+        "innovation": {
+          "title": "Innovation",
+          "desc": "We don't just sew; we code."
+        },
+        "ownership": {
+          "title": "Ownership",
+          "desc": "Every team member is a partner."
+        },
+        "impact": {
+          "title": "Impact",
+          "desc": "Zero-waste fashion revolution."
+        }
+      }
+    },
+    "careers_apply": {
+      "title": "Join the Qeyafa Team",
+      "subtitle": "Powered by QTME (Qeyafa Talent Management Ecosystem)",
+      "badge": "QTME Application",
+      "success": {
+        "title": "Application Received",
+        "desc": "Your application has been successfully submitted to the QTME pipeline. Use the magic link below to track your status at any time.",
+        "magic_link": "Your Magic Link",
+        "note": "No password required. This link is your secure key to the process."
+      }
+    },
+    "application_form": {
+      "steps": {
+        "personal": "Personal",
+        "professional": "Professional",
+        "portfolio": "Portfolio",
+        "cv": "CV Upload"
+      },
+      "personal": {
+        "title": "Personal Information",
+        "full_name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number"
+      },
+      "professional": {
+        "title": "Professional Details",
+        "current_salary": "Current Salary (Monthly)",
+        "expected_salary": "Expected Salary (Monthly)",
+        "currency": "Currency",
+        "notice_period": "Notice Period (Days)",
+        "notice_options": {
+          "immediate": "Immediate",
+          "days_15": "15 Days",
+          "days_30": "30 Days",
+          "days_60": "60 Days",
+          "days_90": "90 Days"
+        }
+      },
+      "portfolio": {
+        "title": "Links & Portfolio",
+        "subtitle": "Optional but highly recommended",
+        "github": "GitHub URL",
+        "linkedin": "LinkedIn URL",
+        "portfolio": "Portfolio URL"
+      },
+      "cv": {
+        "title": "Upload Your CV",
+        "drag_drop": "Drag & drop your CV here",
+        "browse": "or click to browse (PDF, max 5MB)",
+        "change": "Click to change file"
+      },
+      "buttons": {
+        "next": "Next Step",
+        "prev": "Previous",
+        "submit": "Submit Application",
+        "submitting": "Submitting..."
+      },
+      "errors": {
+        "name_required": "Name is required",
+        "email_required": "Email is required",
+        "email_invalid": "Invalid email format",
+        "phone_required": "Phone is required",
+        "current_salary_required": "Current salary is required",
+        "expected_salary_required": "Expected salary is required",
+        "pdf_only": "Please upload a PDF file",
+        "file_size": "File size must be less than 5MB",
+        "cv_required": "Please upload your CV",
+        "submit_failed": "Failed to submit application. Please try again."
       }
     }
   }
