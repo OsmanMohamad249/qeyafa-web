@@ -25,7 +25,7 @@ const Home = () => {
     <div ref={containerRef} className="min-h-screen bg-qeyafa-black overflow-hidden selection:bg-qeyafa-gold/30">
 
       {/* --- HERO SECTION: World-Class Impact --- */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-48 overflow-hidden">
         {/* Dynamic Background */}
         <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
