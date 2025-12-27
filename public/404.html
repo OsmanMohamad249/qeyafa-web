@@ -5,7 +5,9 @@
     <title>Redirecting...</title>
     <script>
       // Single Page Apps for GitHub Pages
-      sessionStorage.redirect = location.href;
+      try {
+        sessionStorage.redirect = location.href;
+      } catch (e) {}
     </script>
     <meta http-equiv="refresh" content="0;URL='/'">
   </head>
