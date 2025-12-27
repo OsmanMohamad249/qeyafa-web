@@ -110,47 +110,63 @@
         "scans": "AI Scans",
         "partners": "Partner Ateliers",
         "fabric": "Fabric Saved (m)"
-      },
-      "ecosystem": {
-        "title": "The Qeyafa Ecosystem",
-        "customer": {
-          "title": "Customer",
-          "desc": "Get perfect fit clothing with AI measurements."
-        },
-        "business": {
-          "title": "Business",
-          "desc": "Uniform solutions for your workforce."
-        },
-        "tailor": {
-          "title": "Tailor",
-          "desc": "Access a global customer base and smart tools."
-        },
-        "supplier": {
-          "title": "Supplier",
-          "desc": "Connect directly with tailors and customers."
-        }
-      },
-      "journey": {
-        "title": "Journey to the Perfect Thobe",
-        "subtitle": "Three simple steps stand between you and elegance.",
-        "step1": {
-          "title": "Scan",
-          "desc": "Take just two photos with your phone."
-        },
-        "step2": {
-          "title": "Customize",
-          "desc": "Select fabrics and details that suit your style."
-        },
-        "step3": {
-          "title": "Receive",
-          "desc": "Delivered to your doorstep in days."
-        }
-      },
-      "cta_section": {
-        "title": "Ready to Experience the Difference?",
-        "desc": "Join thousands who have redefined their tailoring standards. Gold guarantee on every stitch.",
-        "button": "Book Your Appointment"
       }
+    },
+    "ecosystem": {
+      "badge": "The Integrated Ecosystem",
+      "title": "More than just a measurement app.",
+      "desc": "We built Qeyafa to be a platform connecting the customer, tailor, and fabric suppliers in one ecosystem ensuring quality, speed, and sustainability.",
+      "zero_waste": {
+        "title": "Zero Waste",
+        "desc": "Precise tailoring eliminates the need for excess inventory."
+      },
+      "localization": {
+        "title": "Tech Localization",
+        "desc": "Empowering local tailors with advanced digital tools."
+      },
+      "guarantee": {
+        "title": "Gold Guarantee",
+        "desc": "If the fit isn't perfect, we refund your money."
+      },
+      "engine": "AI Processing Engine",
+      "system_active": "System Active",
+      "customer": {
+        "title": "Customer",
+        "desc": "Get perfect fit clothing with AI measurements."
+      },
+      "business": {
+        "title": "Business",
+        "desc": "Uniform solutions for your workforce."
+      },
+      "tailor": {
+        "title": "Tailor",
+        "desc": "Access a global customer base and smart tools."
+      },
+      "supplier": {
+        "title": "Supplier",
+        "desc": "Connect directly with tailors and customers."
+      }
+    },
+    "journey": {
+      "title": "Journey to the Perfect Thobe",
+      "subtitle": "Three simple steps stand between you and elegance.",
+      "step1": {
+        "title": "Scan",
+        "desc": "Take just two photos with your phone."
+      },
+      "step2": {
+        "title": "Customize",
+        "desc": "Select fabrics and details that suit your style."
+      },
+      "step3": {
+        "title": "Receive",
+        "desc": "Delivered to your doorstep in days."
+      }
+    },
+    "cta_section": {
+      "title": "Ready to Experience the Difference?",
+      "desc": "Join thousands who have redefined their tailoring standards. Gold guarantee on every stitch.",
+      "button": "Book Your Appointment"
     },
     "partner_landing": {
       "hero": {
