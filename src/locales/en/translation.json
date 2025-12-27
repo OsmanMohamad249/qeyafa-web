@@ -32,6 +32,13 @@
       "how_it_works": "How it Works",
       "learnMore": "Learn More"
     },
+    "trust": {
+      "title": "TRUSTED TECHNOLOGY BACKED BY",
+      "monshaat": "Monshaat",
+      "vision2030": "Vision 2030",
+      "saudi_made": "Saudi Made",
+      "techstars": "Techstars"
+    },
     "about": {
       "hero": {
         "title": "About Qeyafa",
@@ -118,6 +125,27 @@
           "title": "Supplier",
           "desc": "Connect directly with tailors and customers."
         }
+      },
+      "journey": {
+        "title": "Journey to the Perfect Thobe",
+        "subtitle": "Three simple steps stand between you and elegance.",
+        "step1": {
+          "title": "Scan",
+          "desc": "Take just two photos with your phone."
+        },
+        "step2": {
+          "title": "Customize",
+          "desc": "Select fabrics and details that suit your style."
+        },
+        "step3": {
+          "title": "Receive",
+          "desc": "Delivered to your doorstep in days."
+        }
+      },
+      "cta_section": {
+        "title": "Ready to Experience the Difference?",
+        "desc": "Join thousands who have redefined their tailoring standards. Gold guarantee on every stitch.",
+        "button": "Book Your Appointment"
       }
     },
     "partner_landing": {

@@ -63,14 +63,14 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-36">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse z-50">
             <motion.img
               src={logo}
               alt="Qeyafa Logo"
               whileHover={{ scale: 1.05 }}
-              className="h-24 w-auto object-contain mix-blend-screen"
+              className="h-32 w-auto object-contain mix-blend-screen"
             />
           </Link>
 

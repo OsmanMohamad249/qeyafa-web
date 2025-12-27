@@ -44,7 +44,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <img src={logo} alt="Qeyafa Logo" className="h-32 w-auto object-contain mix-blend-screen" />
+              <img src={logo} alt="Qeyafa Logo" className="h-56 w-auto object-contain mix-blend-screen" />
             </motion.div>
             <p className="text-white/60 text-sm leading-relaxed">
               {t('footer.tagline')}
