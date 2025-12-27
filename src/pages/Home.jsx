@@ -8,6 +8,7 @@ import {
 import { MagneticButton } from '@/components/common/MagneticButton';
 import { GlassCard } from '@/components/common/GlassCard';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
+import NewsTicker from '@/components/common/NewsTicker';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -43,7 +44,7 @@ const Home = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
               {t('hero.title')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2E5C55] via-[#4A7A6F] to-[#D4A017]">
                 {t('hero.title_highlight')}
@@ -52,7 +53,7 @@ const Home = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="text-xl md:text-2xl text-[#8899A6] max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-[#8899A6] max-w-3xl mx-auto mb-10 leading-relaxed font-light">
               {t('hero.description')}
             </p>
           </ScrollReveal>
@@ -70,6 +71,9 @@ const Home = () => {
                 </button>
               </Link>
             </div>
+
+            {/* News Ticker */}
+            <NewsTicker news={t('hero.news', { returnObjects: true })} />
           </ScrollReveal>
         </div>
       </section>
