@@ -129,6 +129,7 @@ export default function Portal() {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 function StatsCard({ icon: IconComponent, label, value }) {
   return (
     <motion.div
