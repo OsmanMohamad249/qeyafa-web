@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import logo from '@/assets/logo.png';
 
 const SplashScreen = ({ onComplete }) => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="fixed inset-0 z-[100] bg-qeyafa-black flex items-center justify-center"
@@ -39,7 +42,7 @@ const SplashScreen = ({ onComplete }) => {
           transition={{ delay: 1.2 }}
           className="text-3xl font-bold text-white tracking-[0.5em] uppercase font-display"
         >
-          Qeyafa
+          {t('splash.title')}
         </motion.h1>
 
         <motion.p
@@ -48,7 +51,7 @@ const SplashScreen = ({ onComplete }) => {
           transition={{ delay: 1.8 }}
           className="text-qeyafa-gold/60 text-sm tracking-widest mt-2"
         >
-          FUTURE OF TAILORING
+          {t('splash.subtitle')}
         </motion.p>
       </div>
     </motion.div>
@@ -56,4 +59,3 @@ const SplashScreen = ({ onComplete }) => {
 };
 
 export default SplashScreen;
-
