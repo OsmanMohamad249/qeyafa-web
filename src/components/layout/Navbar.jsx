@@ -31,6 +31,7 @@ const Navbar = () => {
     { name: t('nav.home'), path: '/' },
     { name: t('nav.about'), path: '/about' },
     { name: t('nav.services'), path: '/services' },
+    { name: t('nav.careers') || 'Careers', path: '/careers' },
     { name: t('nav.contact'), path: '/contact' },
   ];
 
@@ -41,7 +42,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-950/95 backdrop-blur-md border-b border-slate-800'
+          ? 'bg-qeyafa-black/95 backdrop-blur-md border-b border-white/10'
           : 'bg-transparent'
       }`}
     >
@@ -63,10 +64,10 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
+                className="text-white/80 hover:text-white transition-colors duration-200 relative group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-qeyafa-gold to-[#b8860b] group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
             
@@ -75,10 +76,10 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleLanguage}
-              className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors duration-200"
+              className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-200 border border-white/10"
             >
-              <Languages className="w-4 h-4" />
-              <span className="text-sm font-medium">
+              <Languages className="w-4 h-4 text-qeyafa-gold" />
+              <span className="text-sm font-medium text-white">
                 {i18n.language === 'en' ? 'العربية' : 'English'}
               </span>
             </motion.button>
@@ -90,14 +91,14 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={toggleLanguage}
-              className="p-2 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-colors duration-200"
+              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-200 border border-white/10"
             >
-              <Languages className="w-5 h-5" />
+              <Languages className="w-5 h-5 text-qeyafa-gold" />
             </motion.button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-800/50 transition-colors duration-200"
+              className="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

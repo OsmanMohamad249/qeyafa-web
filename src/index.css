@@ -1,57 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
-  
-  --color-purple-50: #faf5ff;
-  --color-purple-100: #f3e8ff;
-  --color-purple-200: #e9d5ff;
-  --color-purple-300: #d8b4fe;
-  --color-purple-400: #c084fc;
-  --color-purple-500: #a855f7;
-  --color-purple-600: #9333ea;
-  --color-purple-700: #7e22ce;
-  --color-purple-800: #6b21a8;
-  --color-purple-900: #581c87;
+  /* Qeyafa Brand Colors */
+  --color-qeyafa-primary: #0F4D3F;
+  --color-qeyafa-gold: #D4A017;
+  --color-qeyafa-black: #020d0a;
+  --color-surface-light: #FAF7F0;
+  --color-surface-dark: #0A2922;
+  --color-text-primary: #1A1A1A;
+  --color-text-on-dark: #FFFFFF;
 
-  --animate-fade-in: fade-in 0.5s ease-in-out;
-  --animate-slide-up: slide-up 0.5s ease-out;
-  --animate-slide-down: slide-down 0.5s ease-out;
+  /* Font families */
+  --font-sans: "Inter", "Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Inter", "Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  @keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  /* Optional accent palette to keep utility coverage */
+  --color-primary-500: var(--color-qeyafa-primary);
+  --color-primary-600: #0d4236;
+  --color-primary-700: #0a362c;
+  --color-gold-500: var(--color-qeyafa-gold);
+
+  /* Animations */
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-gold: pulse-gold 2s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
   }
-
-  @keyframes slide-up {
-    0% { transform: translateY(20px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
-
-  @keyframes slide-down {
-    0% { transform: translateY(-20px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(212, 160, 23, 0.6); }
   }
 }
 
 @layer base {
   html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
+    background-color: var(--color-qeyafa-black);
+    color: var(--color-text-on-dark);
   }
-  
   body {
-    @apply bg-slate-950 text-gray-100 antialiased;
+    @apply bg-qeyafa-black text-white antialiased;
   }
-
   /* RTL Support */
   [dir="rtl"] {
     direction: rtl;
@@ -60,22 +56,51 @@
   [dir="ltr"] {
     direction: ltr;
   }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Focus States */
+  *:focus-visible {
+    outline: 2px solid var(--color-qeyafa-gold);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(15, 77, 63, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 77, 63, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-luxury-gradient {
+    background-image: linear-gradient(135deg, #020d0a 0%, #0F4D3F 50%, #020d0a 100%);
+  }
+  .bg-gold-gradient {
+    background-image: linear-gradient(135deg, #D4A017 0%, #b8860b 50%, #D4A017 100%);
+  }
 }
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-qeyafa-gold to-[#b8860b] bg-clip-text text-transparent;
   }
-
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105;
+    @apply bg-qeyafa-gold text-qeyafa-black px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-[rgba(212,160,23,0.35)];
   }
-
   .btn-secondary {
-    @apply border border-blue-500/50 text-blue-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-blue-500/10 hover:border-blue-400;
+    @apply border border-qeyafa-gold text-qeyafa-gold px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-qeyafa-gold/10;
   }
-
   .card {
-    @apply bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10;
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-qeyafa-gold/40 hover:shadow-[0_10px_40px_rgba(15,77,63,0.35)];
   }
 }

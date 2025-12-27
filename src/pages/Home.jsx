@@ -24,13 +24,13 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-qeyafa-black bg-grid-pattern">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-qeyafa-primary/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-qeyafa-gold/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         {/* Content */}
@@ -41,10 +41,10 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-500/20"
+              className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-qeyafa-gold/30"
             >
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <span className="text-sm text-gray-300">AI-Powered Technology</span>
+              <Sparkles className="w-4 h-4 text-qeyafa-gold" />
+              <span className="text-sm text-white/90">AI-Powered Technology</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -72,7 +72,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed"
+              className="max-w-3xl mx-auto text-lg text-white/70 leading-relaxed"
             >
               {t('hero.description')}
             </motion.p>
