@@ -58,43 +58,43 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-qeyafa-black/95 backdrop-blur-md border-b border-white/10'
+          ? 'bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-44">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse z-50">
             <motion.img
               src={logo}
               alt="Qeyafa Logo"
               whileHover={{ scale: 1.05 }}
-              className="h-40 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 rtl:space-x-reverse text-sm font-medium text-white/80">
+          <div className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse text-sm font-medium text-gray-700">
             {navLinks.map((link) => (
               <div
                 key={link.name}
-                className="relative group"
+                className="relative group h-full flex items-center"
                 onMouseEnter={() => setActiveDropdown(link.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 {link.children ? (
-                  <button className="flex items-center gap-1 hover:text-qeyafa-gold transition-colors py-2">
+                  <button className="flex items-center gap-1 hover:text-qeyafa-primary transition-colors py-2">
                     {link.name}
                     <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </button>
                 ) : (
                   <Link
                     to={link.path}
-                    className="hover:text-qeyafa-gold transition-colors relative group py-2 block"
+                    className="hover:text-qeyafa-primary transition-colors relative group py-2 block"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-qeyafa-gold group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-qeyafa-primary group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 )}
 
@@ -107,13 +107,13 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 w-56 bg-qeyafa-black/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden pt-2"
+                        className="absolute top-full left-0 w-64 bg-white border border-gray-100 rounded-2xl shadow-luxury-lg overflow-hidden py-2"
                       >
                         {link.children.map((child) => (
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                            className="block px-6 py-3 text-gray-600 hover:text-qeyafa-primary hover:bg-gray-50 transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -131,11 +131,15 @@ const Navbar = () => {
              {/* Language Toggle */}
              <button
               onClick={toggleLanguage}
-              className="hover:text-qeyafa-gold transition-colors flex items-center gap-1 text-white/80"
+              className="hover:text-qeyafa-primary transition-colors flex items-center gap-2 text-gray-600 font-medium"
             >
               <Languages className="w-4 h-4" />
               <span>{i18n.language === 'en' ? 'AR' : 'EN'}</span>
             </button>
+
+            <Link to="/book" className="bg-qeyafa-primary text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-qeyafa-primary/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform">
+              {t('nav.book_now', 'Book Now')}
+            </Link>
 
           </div>
 
@@ -143,7 +147,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center space-x-4 rtl:space-x-reverse z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors duration-200"
+              className="p-2 rounded-lg text-gray-900 hover:bg-gray-100 transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

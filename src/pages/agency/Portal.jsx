@@ -3,8 +3,7 @@ import { useAuthStore } from '@/stores/authStore';
 import { motion } from 'framer-motion';
 import { GlassCard } from '@/components/common/GlassCard';
 import {
-  Users, Briefcase, FileCheck, Plane, AlertCircle, Loader2,
-  Check, Clock, FileText
+  Users, Briefcase, FileCheck, Plane, AlertCircle, Loader2
 } from 'lucide-react';
 
 // Visa Tracking Steps

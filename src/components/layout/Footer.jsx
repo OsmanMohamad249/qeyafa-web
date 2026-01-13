@@ -34,21 +34,89 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-qeyafa-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-white border-t border-gray-100 pt-20 pb-10">
+      <div className="max-w-[1240px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <img src={logo} alt="Qeyafa Logo" className="h-56 w-auto object-contain mix-blend-screen" />
+              <img src={logo} alt="Qeyafa Logo" className="h-24 w-auto object-contain" />
             </motion.div>
-            <p className="text-white/60 text-sm leading-relaxed">
-              {t('footer.tagline')}
+            <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+              {t('footer.tagline', 'Leading the fashion-tech transformation with AI precision and sustainable practices.')}
             </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-gray-400 hover:text-qeyafa-primary transition-colors"
+                  aria-label={link.label}
+                >
+                  <link.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Links Sections */}
+          <div>
+            <h3 className="text-gray-900 font-bold mb-6">{t('footer.company', 'Company')}</h3>
+            <ul className="space-y-4">
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-gray-500 hover:text-qeyafa-primary transition-colors text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-gray-900 font-bold mb-6">{t('footer.ecosystem', 'Ecosystem')}</h3>
+            <ul className="space-y-4">
+              {ecosystemLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-gray-500 hover:text-qeyafa-primary transition-colors text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-gray-900 font-bold mb-6">{t('footer.support', 'Support')}</h3>
+            <ul className="space-y-4">
+              {supportLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-gray-500 hover:text-qeyafa-primary transition-colors text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+           <p className="text-gray-400 text-xs">
+             &copy; {currentYear} Qeyafa Platform. All rights reserved.
+           </p>
+           <div className="flex gap-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+             {/* Small Badges */}
+             <span className="text-xs font-bold text-gray-300 pointer-events-none">QEYAFA AI</span>
+           </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
             <div className="flex space-x-4 rtl:space-x-reverse pt-4">
               {socialLinks.map((social) => (
                 <motion.a

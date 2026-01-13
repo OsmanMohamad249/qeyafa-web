@@ -14,6 +14,7 @@ export default {
 
         // Extended palette for UI flexibility
         'qeyafa': {
+          surface: '#F9FAFB',              // NEW: Light surface for NTDP style
           50: '#f0fdf8',
           100: '#ccfbea',
           200: '#9af5d6',

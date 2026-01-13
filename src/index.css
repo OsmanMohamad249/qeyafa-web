@@ -49,46 +49,11 @@
   /* Font families */
   --font-sans: "Inter", "Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: "Inter", "Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-arabic: "Tajawal", "Inter", system-ui, sans-serif;
-  --font-english: "Inter", "Tajawal", system-ui, sans-serif;
+}
 
-  /* Border radius */
-  --radius-luxury: 0.75rem;
-
-  /* Shadows */
-  --shadow-luxury: 0 4px 30px rgba(15, 77, 63, 0.15);
-  --shadow-luxury-lg: 0 10px 50px rgba(15, 77, 63, 0.25);
-  --shadow-gold: 0 4px 30px rgba(212, 160, 23, 0.15);
-  --shadow-gold-lg: 0 10px 50px rgba(212, 160, 23, 0.25);
-  --shadow-glow: 0 0 40px rgba(15, 77, 63, 0.3);
-  --shadow-glow-gold: 0 0 40px rgba(212, 160, 23, 0.3);
-
-  /* Animations */
-  --animate-shimmer: shimmer 2s linear infinite;
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-gold: pulse-gold 2s ease-in-out infinite;
-  --animate-gradient-shift: gradient-shift 8s ease infinite;
-  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
-
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  @keyframes pulse-gold {
-    0%, 100% { box-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(212, 160, 23, 0.6); }
-  }
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 20px rgba(15, 77, 63, 0.3), 0 0 40px rgba(212, 160, 23, 0.1); }
-    50% { box-shadow: 0 0 40px rgba(15, 77, 63, 0.5), 0 0 80px rgba(212, 160, 23, 0.2); }
+@layer base {
+  body {
+    @apply bg-qeyafa-surface text-gray-900 transition-colors duration-300;
   }
 }
 
