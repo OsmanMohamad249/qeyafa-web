@@ -75,7 +75,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse text-sm font-medium text-gray-700">
+          <div className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse text-sm font-medium text-white/90">
             {navLinks.map((link) => (
               <div
                 key={link.name}
@@ -107,13 +107,13 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 w-64 bg-white border border-gray-100 rounded-2xl shadow-luxury-lg overflow-hidden py-2"
+                        className="absolute top-full left-0 w-64 bg-black/90 border border-white/10 rounded-2xl shadow-luxury-lg overflow-hidden py-2 backdrop-blur-xl"
                       >
                         {link.children.map((child) => (
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-6 py-3 text-gray-600 hover:text-qeyafa-primary hover:bg-gray-50 transition-colors"
+                            className="block px-6 py-3 text-white/80 hover:text-white hover:bg-white/5 transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -128,19 +128,19 @@ const Navbar = () => {
 
           {/* Right Actions */}
           <div className="hidden lg:flex items-center space-x-6 rtl:space-x-reverse">
-             {/* Language Toggle */}
+             {/* Language Toggle - New Style */}
              <button
               onClick={toggleLanguage}
-              className="hover:text-qeyafa-primary transition-colors flex items-center gap-2 text-gray-600 font-medium"
+              className="text-white hover:text-qeyafa-primary transition-colors text-sm font-medium tracking-wide"
             >
-              <Languages className="w-4 h-4" />
-              <span>{i18n.language === 'en' ? 'AR' : 'EN'}</span>
+              E / ع
             </button>
 
-            <Link to="/book" className="bg-qeyafa-primary text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-qeyafa-primary/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform">
-              {t('nav.book_now', 'Book Now')}
-            </Link>
-
+            {/* Help Button - Pill Style */}
+            <button className="flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors">
+              <span>HELP</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}

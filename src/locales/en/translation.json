@@ -27,8 +27,9 @@
     },
     "hero": {
       "badge": "The Future of Digital Tailoring",
-      "title": "Custom Tailoring:",
-      "title_highlight": "AI Precision Meets Traditional Craftsmanship",
+      "title_line1": "Custom Tailoring:",
+      "title_line2": "AI Precision Meets Traditional",
+      "title_line3": "Craftsmanship",
       "subtitle": "Qeyafa is an innovative tech platform transforming your photos into accurate 3D models to ensure the Perfect Fit and solve sizing issues forever.",
       "description": "Qeyafa is an innovative tech platform transforming your photos into accurate 3D models to ensure the Perfect Fit and solve sizing issues forever. An integrated platform merging proprietary Computer Vision with a network of skilled tailors, empowering individuals with custom designs and businesses with uniform solutions.",
       "stats": "96% Accuracy | 20+ Measurement Points | 360° Virtual Try-on",

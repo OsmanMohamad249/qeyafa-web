@@ -14,11 +14,9 @@ createRoot(document.getElementById('root')).render(
     <HelmetProvider>
       <BrowserRouter>
         <RootLayout>
-          <div className="bg-qeyafa-black min-h-screen">
-            <PageTransition>
-              <AppRoutes />
-            </PageTransition>
-          </div>
+          <PageTransition>
+            <AppRoutes />
+          </PageTransition>
         </RootLayout>
       </BrowserRouter>
     </HelmetProvider>

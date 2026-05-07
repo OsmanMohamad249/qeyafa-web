@@ -7,66 +7,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Qeyafa Brand Identity Colors
-        'qeyafa-primary': '#0F4D3F',      // Deep Green - Primary brand color
-        'qeyafa-gold': '#D4A017',          // Luxury Gold - Accent color
-        'qeyafa-black': '#020d0a',         // Void Background - Dark theme base
+        // Strict Color Palette Enforcement
+        'background': '#020402',
+        'gold': '#C5A065',
+        'deep-teal': '#115E59',
+        'text-body': '#E5E7EB',
 
-        // Extended palette for UI flexibility
-        'qeyafa': {
-          surface: '#F9FAFB',              // NEW: Light surface for NTDP style
-          50: '#f0fdf8',
-          100: '#ccfbea',
-          200: '#9af5d6',
-          300: '#5fe8bc',
-          400: '#2dd39e',
-          500: '#0F4D3F',                  // Primary
-          600: '#0d4236',
-          700: '#0a362c',
-          800: '#082b23',
-          900: '#05201a',
-          950: '#020d0a',                  // Black variant
-        },
-        'gold': {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#D4A017',                  // Luxury Gold
-          600: '#b8860b',
-          700: '#92690a',
-          800: '#795810',
-          900: '#654a14',
-          950: '#3d2908',
-        },
+        // Legacy for compatibility (can be phased out)
+        'qeyafa-primary': '#C5A065',
+        'qeyafa-secondary': '#115E59',
+        'qeyafa-accent': '#115E59',
+        'qeyafa-gold': '#C5A065',
+        'qeyafa-black': '#020402',
       },
 
       fontFamily: {
-        // Arabic-first font stack with Tajawal
-        'arabic': ['Tajawal', 'Inter', 'system-ui', 'sans-serif'],
-        // English font stack with Inter
-        'english': ['Inter', 'Tajawal', 'system-ui', 'sans-serif'],
-        // Default sans-serif combining both
-        'sans': ['Inter', 'Tajawal', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        // Display font for headings
-        'display': ['Inter', 'Tajawal', 'system-ui', 'sans-serif'],
+        'arabic': ['"IBM Plex Sans Arabic"', 'Outfit', 'system-ui', 'sans-serif'],
+        'english': ['Outfit', '"IBM Plex Sans Arabic"', 'system-ui', 'sans-serif'],
+        'sans': ['Outfit', '"IBM Plex Sans Arabic"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'display': ['Outfit', '"IBM Plex Sans Arabic"', 'system-ui', 'sans-serif'],
       },
 
       backgroundImage: {
-        // Subtle grid pattern
         'grid-pattern': `
-          linear-gradient(to right, rgba(15, 77, 63, 0.03) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(15, 77, 63, 0.03) 1px, transparent 1px)
+          linear-gradient(to right, rgba(17, 94, 89, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(17, 94, 89, 0.03) 1px, transparent 1px)
         `,
-        // Luxury gradient backgrounds
-        'luxury-gradient': 'linear-gradient(135deg, #020d0a 0%, #0F4D3F 50%, #020d0a 100%)',
-        'gold-gradient': 'linear-gradient(135deg, #D4A017 0%, #b8860b 50%, #D4A017 100%)',
-        'radial-glow': 'radial-gradient(ellipse at center, rgba(15, 77, 63, 0.15) 0%, transparent 70%)',
-        // Hero section gradient
-        'hero-gradient': 'linear-gradient(180deg, #020d0a 0%, rgba(15, 77, 63, 0.2) 50%, #020d0a 100%)',
-        // Card hover gradient
-        'card-gradient': 'linear-gradient(145deg, rgba(15, 77, 63, 0.1) 0%, rgba(212, 160, 23, 0.05) 100%)',
+        'luxury-gradient': 'linear-gradient(135deg, #020402 0%, #115E59 50%, #020402 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #C5A065 0%, #b8860b 50%, #C5A065 100%)',
+        'radial-glow': 'radial-gradient(ellipse at center, rgba(17, 94, 89, 0.15) 0%, transparent 70%)',
+        'hero-gradient': 'linear-gradient(180deg, #020402 0%, rgba(17, 94, 89, 0.2) 50%, #020402 100%)',
+        'card-gradient': 'linear-gradient(145deg, rgba(17, 94, 89, 0.1) 0%, rgba(197, 160, 101, 0.05) 100%)',
       },
 
       backgroundSize: {
@@ -89,10 +60,10 @@ export default {
         },
         'glow-pulse': {
           '0%, 100%': {
-            boxShadow: '0 0 20px rgba(15, 77, 63, 0.3), 0 0 40px rgba(212, 160, 23, 0.1)'
+            boxShadow: '0 0 20px rgba(17, 94, 89, 0.3), 0 0 40px rgba(197, 160, 101, 0.1)'
           },
           '50%': {
-            boxShadow: '0 0 40px rgba(15, 77, 63, 0.5), 0 0 80px rgba(212, 160, 23, 0.2)'
+            boxShadow: '0 0 40px rgba(17, 94, 89, 0.5), 0 0 80px rgba(197, 160, 101, 0.2)'
           },
         },
         'float': {
@@ -106,12 +77,12 @@ export default {
       },
 
       boxShadow: {
-        'luxury': '0 4px 30px rgba(15, 77, 63, 0.15)',
-        'luxury-lg': '0 10px 50px rgba(15, 77, 63, 0.25)',
-        'gold': '0 4px 30px rgba(212, 160, 23, 0.15)',
-        'gold-lg': '0 10px 50px rgba(212, 160, 23, 0.25)',
-        'glow': '0 0 40px rgba(15, 77, 63, 0.3)',
-        'glow-gold': '0 0 40px rgba(212, 160, 23, 0.3)',
+        'luxury': '0 4px 30px rgba(17, 94, 89, 0.15)',
+        'luxury-lg': '0 10px 50px rgba(17, 94, 89, 0.25)',
+        'gold': '0 4px 30px rgba(197, 160, 101, 0.15)',
+        'gold-lg': '0 10px 50px rgba(197, 160, 101, 0.25)',
+        'glow': '0 0 40px rgba(17, 94, 89, 0.3)',
+        'glow-gold': '0 0 40px rgba(197, 160, 101, 0.3)',
       },
 
       borderRadius: {
@@ -125,6 +96,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    //
+  ],
 }
-
