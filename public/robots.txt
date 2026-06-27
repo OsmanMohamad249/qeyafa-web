@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /agency/
+Disallow: /assessment/
+Disallow: /status/
+
+Sitemap: https://qeyafa.com/sitemap.xml
