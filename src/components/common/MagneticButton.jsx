@@ -16,7 +16,7 @@ export function MagneticButton({
 
   const variantStyles = {
     primary: `
-      bg-qeyafa-gold text-qeyafa-primary font-semibold
+      bg-qeyafa-gold text-qeyafa-black font-semibold
       hover:shadow-[0_0_30px_rgba(212,160,23,0.5)]
     `,
     secondary: `
