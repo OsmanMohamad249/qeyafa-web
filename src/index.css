@@ -46,6 +46,10 @@
   --color-gold: #C5A065;
   --color-deep-teal: #115E59;
   --color-text-body: #E5E7EB;
+
+  /* Font Family */
+  --font-sans: 'Thmanyah Sans', system-ui, sans-serif;
+  --font-display: 'Thmanyah Sans', system-ui, sans-serif;
 }
 
 @layer base {
@@ -63,9 +67,9 @@
   --qeyafa-gold: #C5A065;
   --text-body: #E5E7EB;
 
-  /* Typography — Thmanyah for both languages */
+  /* Typography — Thmanyah for ALL content (both languages) */
   --font-arabic: 'Thmanyah Sans', system-ui, sans-serif;
-  --font-english: 'Inter', 'Thmanyah Sans', system-ui, sans-serif;
+  --font-english: 'Thmanyah Sans', system-ui, sans-serif;
 
   /* Transitions */
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,13 +97,13 @@
 
   body {
     @apply bg-background text-text-body antialiased;
-    font-family: var(--font-english);
+    font-family: 'Thmanyah Sans', system-ui, sans-serif;
   }
 
   /* RTL Support for Arabic */
   [dir="rtl"] body,
   html[lang="ar"] body {
-    font-family: var(--font-arabic);
+    font-family: 'Thmanyah Sans', system-ui, sans-serif;
   }
 
   [dir="rtl"] {

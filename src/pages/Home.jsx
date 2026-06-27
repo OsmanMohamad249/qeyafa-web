@@ -70,26 +70,26 @@ export default function Home() {
 					<div className="absolute bottom-1/4 right-1/4 w-[360px] h-[360px] bg-deep-teal/10 blur-[100px] rounded-full" />
 				</motion.div>
 
-				<div className="relative z-10 max-w-6xl mx-auto w-full text-center space-y-10">
+				<div className="relative z-10 max-w-6xl mx-auto w-full text-center space-y-8">
 					<ScrollReveal>
-						<span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-[11px] uppercase tracking-[0.5em] text-gold font-medium">
+						<span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-[11px] uppercase tracking-[0.4em] text-gold font-medium">
 							<Sparkles className="w-4 h-4" />
 							{t('hero.badge')}
 						</span>
 					</ScrollReveal>
 
 					<ScrollReveal delay={0.1}>
-						<div className="max-w-4xl mx-auto space-y-2">
-							<h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
-								<span className="block text-[#C5A065]">{t('hero.title_line1')}</span>
-								<span className="block text-[#115E59]">{t('hero.title_line2')}</span>
+						<div className="max-w-5xl mx-auto">
+							<h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.2] tracking-tight">
+								<span className="block text-[#C5A065] mb-1">{t('hero.title_line1')}</span>
+								<span className="block text-[#115E59] mb-1">{t('hero.title_line2')}</span>
 								<span className="block text-[#C5A065]">{t('hero.title_line3')}</span>
 							</h1>
 						</div>
 					</ScrollReveal>
 
 					<ScrollReveal delay={0.2}>
-						<p className="text-base md:text-xl text-text-body/70 max-w-4xl mx-auto leading-relaxed">
+						<p className="text-base md:text-lg text-text-body/60 max-w-3xl mx-auto leading-relaxed">
 							{t('hero.description')}
 						</p>
 					</ScrollReveal>
