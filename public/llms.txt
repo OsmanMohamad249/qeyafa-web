@@ -22,13 +22,13 @@ Qeyafa merges traditional tailoring craftsmanship with cutting-edge Computer Vis
 
 ## Links
 
-- Website: https://qeyafa.com
-- About: https://qeyafa.com/about
-- Services: https://qeyafa.com/services
-- Book Measurement: https://qeyafa.com/book
-- Partners: https://qeyafa.com/hub/partners
-- Careers: https://qeyafa.com/careers
-- Contact: https://qeyafa.com/contact
+- [Website](https://qeyafa.com)
+- [About](https://qeyafa.com/about)
+- [Services](https://qeyafa.com/services)
+- [Book Measurement](https://qeyafa.com/book)
+- [Partners](https://qeyafa.com/hub/partners)
+- [Careers](https://qeyafa.com/careers)
+- [Contact](https://qeyafa.com/contact)
 
 ## Languages
 
