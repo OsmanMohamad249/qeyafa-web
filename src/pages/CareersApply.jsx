@@ -5,6 +5,7 @@ import { CheckCircle, Copy, ExternalLink } from 'lucide-react';
 import { GlassCard } from '@/components/common/GlassCard';
 import { MultiStepApplicationForm } from '@/components/apply/MultiStepApplicationForm';
 import { MagneticButton } from '@/components/common/MagneticButton';
+import { SEO } from '@/components/seo/SEO';
 
 const CareersApply = () => {
   const { t } = useTranslation();
@@ -75,6 +76,11 @@ const CareersApply = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30 py-24 px-4">
+      <SEO
+        title="Careers"
+        description="Join Qeyafa's team. Apply for exciting roles in AI, fashion technology, and custom tailoring innovation. Build the future of fashion with us."
+        path="/careers"
+      />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-qeyafa-gold text-sm uppercase tracking-[0.3em] mb-3">{t('careers_apply.badge')}</p>

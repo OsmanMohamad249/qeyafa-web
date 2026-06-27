@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Zap, Users } from 'lucide-react';
+import { SEO } from '@/components/seo/SEO';
 
 const Services = () => {
   const { t } = useTranslation();
@@ -18,8 +19,26 @@ const Services = () => {
     }
   ];
 
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    provider: {
+      '@type': 'Organization',
+      name: 'Qeyafa'
+    },
+    serviceType: 'Custom Tailoring Technology',
+    description: 'AI-powered custom tailoring services including 3D body measurement, pattern generation, and B2B solutions.',
+    areaServed: 'Saudi Arabia'
+  };
+
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern pt-24 pb-16">
+      <SEO
+        title="Services"
+        description="Explore Qeyafa's AI-powered tailoring services. Individual custom tailoring, B2B corporate solutions, and advanced body measurement technology."
+        path="/services"
+        jsonLd={serviceJsonLd}
+      />
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-qeyafa-primary/10 rounded-full blur-3xl"></div>

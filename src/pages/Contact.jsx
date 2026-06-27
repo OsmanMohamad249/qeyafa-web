@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
+import { SEO } from '@/components/seo/SEO';
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern pt-24 pb-16">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Qeyafa. Reach out for custom tailoring solutions, partnerships, or any inquiries about our AI-powered fashion technology."
+        path="/contact"
+      />
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-qeyafa-primary/10 rounded-full blur-3xl"></div>

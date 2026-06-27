@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Scan, Recycle, Users, Zap } from 'lucide-react';
 import { GlassCard } from '@/components/common/GlassCard';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
+import { SEO } from '@/components/seo/SEO';
 
 const About = () => {
   const { t } = useTranslation();
@@ -32,6 +33,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
+      <SEO
+        title="About Us"
+        description="Learn about Qeyafa's mission to revolutionize custom tailoring with AI technology. Our vision, values, and the team behind 95% accurate body measurements."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

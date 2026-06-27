@@ -4,6 +4,7 @@ import { Code, Globe, TrendingUp, Cpu, Users, Zap, ArrowRight } from 'lucide-rea
 import { Link } from 'react-router-dom';
 import { GlassCard } from '@/components/common/GlassCard';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
+import { SEO } from '@/components/seo/SEO';
 
 const QTMELanding = () => {
   const { t } = useTranslation();
@@ -46,6 +47,11 @@ const QTMELanding = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
+      <SEO
+        title="QTME Technology"
+        description="Discover Qeyafa's QTME - the AI engine behind accurate 3D body measurements. Join our team and help revolutionize the fashion technology industry."
+        path="/qtme"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

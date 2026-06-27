@@ -4,6 +4,7 @@ import { Scissors, FileText, BarChart, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { GlassCard } from '@/components/common/GlassCard';
 import { ScrollReveal } from '@/components/common/ScrollReveal';
+import { SEO } from '@/components/seo/SEO';
 
 const PartnerLanding = () => {
   const { t } = useTranslation();
@@ -28,6 +29,11 @@ const PartnerLanding = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
+      <SEO
+        title="Partner Hub"
+        description="Join Qeyafa's partner network. Access orders, manage your tailoring business, and grow with AI-powered tools designed for tailors and artisans."
+        path="/hub/partners"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

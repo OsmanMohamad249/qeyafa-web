@@ -8,6 +8,7 @@ import {
   Smartphone, Briefcase, Scissors, Factory
 } from 'lucide-react';
 import { GlassCard } from '@/components/common/GlassCard';
+import { SEO } from '@/components/seo/SEO';
 
 const Counter = ({ value, suffix = '' }) => {
   const ref = useRef(null);
@@ -90,6 +91,11 @@ const HubLanding = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
+      <SEO
+        title="Qeyafa Hub"
+        description="Explore Qeyafa's ecosystem hub. Connect as a customer, business partner, tailor, or supplier. AI-powered tailoring platform for everyone."
+        path="/hub"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Animated Background */}

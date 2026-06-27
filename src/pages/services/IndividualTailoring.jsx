@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Zap, Shield } from 'lucide-react';
+import { SEO } from '@/components/seo/SEO';
 
 const IndividualTailoring = () => {
   const { t } = useTranslation();
@@ -26,6 +27,11 @@ const IndividualTailoring = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
+      <SEO
+        title="Individual Tailoring"
+        description="Get perfectly fitted custom garments with Qeyafa's AI body scanning. 95% accurate measurements from a simple 2D photo. Private, fast, and precise."
+        path="/services/individual"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Animated Background */}

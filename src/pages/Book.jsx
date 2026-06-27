@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { GlassCard } from '@/components/common/GlassCard';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { SEO } from '@/components/seo/SEO';
 
 const steps = ['Style', 'Measurement', 'Confirm'];
 const styles = ['Saudi Style', 'Kuwaiti Style', 'Qatari Style'];
@@ -16,6 +17,16 @@ const Book = () => {
 
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30 py-24 px-4">
+      <SEO
+        title="Book a Measurement"
+        description="Book your AI body measurement session with Qeyafa. Choose your style, get precise 3D measurements from a simple photo, and start your custom tailoring experience."
+        path="/book"
+      />
+      <SEO
+        title="Book a Measurement"
+        description="Book your AI-powered body measurement session with Qeyafa. Choose your style, select measurement method, and get perfectly fitted custom tailoring."
+        path="/book"
+      />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-qeyafa-gold text-sm uppercase tracking-[0.3em] mb-3">Measurement Booking</p>

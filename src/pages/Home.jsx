@@ -9,6 +9,7 @@ import { ModernCard } from '@/components/common/ModernCard';
 import { JourneyStepper } from '@/components/common/JourneyStepper';
 import { PromoSection } from '@/components/home/PromoSection';
 import { Partners } from '@/components/home/Partners';
+import { SEO } from '@/components/seo/SEO';
 
 const services = [
 	{
@@ -35,8 +36,29 @@ export default function Home() {
 	const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end end'] });
 	const heroParallax = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
+	const organizationJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: 'Qeyafa',
+		url: 'https://qeyafa.com',
+		logo: 'https://qeyafa.com/logo.png',
+		description: 'AI-Powered Custom Tailoring Technology. Transform your fashion experience with 95% accurate 3D body measurements from 2D photos.',
+		sameAs: [],
+		contactPoint: {
+			'@type': 'ContactPoint',
+			contactType: 'customer service',
+			availableLanguage: ['English', 'Arabic']
+		}
+	};
+
 	return (
 		<div ref={containerRef} className="min-h-screen bg-background text-text-body overflow-hidden">
+			<SEO
+				title="AI-Powered Custom Tailoring Technology"
+				description="Transform your fashion experience with Qeyafa's AI technology. 95% accurate 3D body measurements from 2D photos. Custom tailoring made smart."
+				path="/"
+				jsonLd={organizationJsonLd}
+			/>
 			{/* HERO */}
 			<section className="relative min-h-[90vh] flex items-center justify-center pt-24 px-4">
 				<motion.div
