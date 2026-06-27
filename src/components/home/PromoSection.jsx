@@ -46,8 +46,8 @@ export function PromoSection() {
   }
 
   // Helper to get title strings whether they are keys or direct text
-  const titleText = slide.isStatic ? t('hero.title') : slide.title;
-  const highlightText = slide.isStatic ? t('hero.title_highlight') : '';
+  const titleText = slide.isStatic ? t('hero.title_line1') : slide.title;
+  const highlightText = slide.isStatic ? t('hero.title_line2') : '';
   const subtitleText = slide.isStatic ? t('hero.description') : slide.subtitle;
   const ctaText = t('hero.learnMore');
 
