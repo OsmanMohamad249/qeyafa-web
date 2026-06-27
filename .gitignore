@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Font source archive
+Thmanyah-Font-Family/
+Thmanyah-Font-Family.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
