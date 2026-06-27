@@ -2,20 +2,16 @@ import { useState } from 'react';
 import { AppRoutes } from './routes';
 import SplashScreen from '@/components/layout/SplashScreen';
 
-export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
+// Detect bots/crawlers to skip splash screen for SEO
+const isBot = /bot|crawl|spider|lighthouse|googlebot|bingbot|yandex|baidu|facebookexternalhit|twitterbot|linkedinbot|whatsapp/i.test(
+  navigator.userAgent
+);
 
-  // Optional: Check if splash has already been shown in this session
-  // useEffect(() => {
-  //   const hasShownSplash = sessionStorage.getItem('hasShownSplash');
-  //   if (hasShownSplash) {
-  //     setShowSplash(false);
-  //   }
-  // }, []);
+export default function App() {
+  const [showSplash, setShowSplash] = useState(!isBot);
 
   const handleSplashComplete = () => {
     setShowSplash(false);
-    // sessionStorage.setItem('hasShownSplash', 'true');
   };
 
   return (

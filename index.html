@@ -29,28 +29,91 @@
     <meta name="twitter:description" content="Transform your fashion experience with 95% accurate 3D body measurements from 2D photos." />
     <meta name="twitter:image" content="https://qeyafa.com/og-image.png" />
 
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Qeyafa",
+      "alternateName": "قيافة",
+      "url": "https://qeyafa.com",
+      "logo": "https://qeyafa.com/og-image.png",
+      "description": "AI-Powered Custom Tailoring Technology. Transform your fashion experience with 95% accurate 3D body measurements from 2D photos.",
+      "foundingDate": "2024",
+      "areaServed": "Saudi Arabia",
+      "knowsLanguage": ["en", "ar"],
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Arabic"]
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "AI-powered custom tailoring with 95% accurate body measurements"
+      }
+    }
+    </script>
+
     <!-- Google Fonts: Inter & Tajawal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <title>Qeyafa - AI-Powered Custom Tailoring</title>
+
+    <!-- Critical CSS for initial render -->
+    <style>
+      body { margin: 0; background: #080C0B; color: #fff; font-family: 'Inter', 'Tajawal', sans-serif; }
+      .shell-content { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+      .shell-content h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+      .shell-content h1 .gold { color: #C5A065; }
+      .shell-content h1 .teal { color: #115E59; }
+      .shell-content p { font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 800px; line-height: 1.7; }
+      .shell-content nav { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+      .shell-content nav a { color: #C5A065; text-decoration: none; padding: 0.5rem 1rem; border: 1px solid rgba(197,160,101,0.3); border-radius: 0.5rem; }
+      .shell-services { margin-top: 3rem; display: grid; gap: 1.5rem; max-width: 900px; width: 100%; }
+      .shell-services h2 { font-size: 1.5rem; color: #C5A065; }
+      .shell-services ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+      .shell-services li { background: rgba(255,255,255,0.05); padding: 1rem 1.5rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); }
+      #root:not(:empty) + .shell-content { display: none; }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- Single Page Apps for GitHub Pages -->
-    <script>
-      (function(l) {
-        if (l.search && l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location));
-    </script>
+    <div id="root">
+      <!-- Static SEO content - replaced by React on hydration -->
+      <main class="shell-content" aria-label="Qeyafa - AI-Powered Custom Tailoring">
+        <h1><span class="gold">Custom Tailoring:</span> <span class="teal">AI Precision Meets Traditional</span> <span class="gold">Craftsmanship</span></h1>
+        <p>Qeyafa is an innovative tech platform transforming your photos into accurate 3D models to ensure the Perfect Fit and solve sizing issues forever. An integrated platform merging proprietary Computer Vision with a network of skilled tailors, empowering individuals with custom designs and businesses with uniform solutions.</p>
+        <p>قيافة هي منصة تقنية ابتكارية تحول صورك إلى نموذج ثلاثي الأبعاد لضمان القياس المثالي وحل مشكلة القياس الخاطئ نهائياً. منصة متكاملة تدمج الرؤية الحاسوبية مع شبكة من أمهر الخياطين.</p>
+
+        <nav aria-label="Main Navigation">
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/services/individual">Individual Tailoring</a>
+          <a href="/services/b2b">Corporate Solutions</a>
+          <a href="/hub">Hub</a>
+          <a href="/hub/partners">Partners</a>
+          <a href="/hub/suppliers">Suppliers</a>
+          <a href="/book">Book a Measurement</a>
+          <a href="/qtme">QTME</a>
+          <a href="/contact">Contact</a>
+          <a href="/careers">Careers</a>
+        </nav>
+
+        <section class="shell-services">
+          <h2>Our Services - خدماتنا</h2>
+          <ul>
+            <li>AI Body Measurement - 95% Accuracy | قياس الجسم بالذكاء الاصطناعي</li>
+            <li>Individual Custom Tailoring | خياطة مخصصة للأفراد</li>
+            <li>Corporate Uniform Solutions (B2B) | حلول الزي الموحد للشركات</li>
+            <li>Partner Tailor Network | شبكة الخياطين الشركاء</li>
+            <li>Fabric Supplier Hub | مركز موردي الأقمشة</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
