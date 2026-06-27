@@ -18,7 +18,6 @@ const HubLanding = lazy(() => import('@/pages/hub/HubLanding'))
 const PartnerRegister = lazy(() => import('@/pages/hub/PartnerRegister'))
 const CorporateLanding = lazy(() => import('@/pages/services/CorporateLanding'))
 const Book = lazy(() => import('@/pages/Book'))
-const QTMELanding = lazy(() => import('@/pages/QTMELanding'))
 const CareersApply = lazy(() => import('@/pages/CareersApply'))
 const IndividualTailoring = lazy(() => import('@/pages/services/IndividualTailoring'))
 
@@ -48,7 +47,6 @@ export function AppRoutes() {
           <Route path="/hub/partners" element={<PartnerLanding />} />
           <Route path="/hub/suppliers" element={<SupplierLanding />} />
           <Route path="/book" element={<Book />} />
-          <Route path="/qtme" element={<QTMELanding />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<CareersApply />} />
           <Route path="/careers/apply" element={<CareersApply />} />

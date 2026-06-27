@@ -23,7 +23,7 @@
       "careers": "Careers",
       "contact": "Contact",
       "book_measurement": "Book a Measurement",
-      "qtme": "QTME (Careers)"
+      "qtme": "Careers"
     },
     "hero": {
       "badge": "The Future of Digital Tailoring",
@@ -276,11 +276,11 @@
     },
     "careers_apply": {
       "title": "Join the Qeyafa Team",
-      "subtitle": "Powered by QTME (Qeyafa Talent Management Ecosystem)",
-      "badge": "QTME Application",
+      "subtitle": "Qeyafa Talent Management Ecosystem",
+      "badge": "Career Application",
       "success": {
         "title": "Application Received",
-        "desc": "Your application has been successfully submitted to the QTME pipeline. Use the magic link below to track your status at any time.",
+        "desc": "Your application has been successfully submitted. Use the magic link below to track your status at any time.",
         "magic_link": "Your Magic Link",
         "note": "No password required. This link is your secure key to the process."
       }

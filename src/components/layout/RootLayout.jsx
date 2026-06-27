@@ -10,10 +10,10 @@ export function RootLayout({ children }) {
     document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
     document.documentElement.lang = i18n.language;
 
-    // Set font family
+    // Set font family — Thmanyah Sans for both, with Inter fallback for English
     document.body.style.fontFamily = isRTL
-      ? "'Tajawal', sans-serif"
-      : "'Inter', sans-serif";
+      ? "'Thmanyah Sans', system-ui, sans-serif"
+      : "'Thmanyah Sans', 'Inter', system-ui, sans-serif";
   }, [isRTL, i18n.language]);
 
   return (
