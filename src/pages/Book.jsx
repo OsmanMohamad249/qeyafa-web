@@ -47,6 +47,22 @@ const Book = () => {
         </div>
 
         <GlassCard className="p-8 border-qeyafa-gold/30">
+          {/* WebMCP Declarative: AI agents can discover this booking capability */}
+          <form
+            toolname="book_measurement"
+            tooldescription="Book an AI body measurement session at Qeyafa for custom tailoring. Select a garment style and measurement method."
+            hidden
+            aria-hidden="true"
+          >
+            <select name="style" toolparamdescription="Garment style: Saudi Style, Kuwaiti Style, or Qatari Style">
+              {styles.map(s => <option key={s} value={s}>{s}</option>)}
+            </select>
+            <select name="method" toolparamdescription="Measurement method: AI Body Scan (Recommended) or Manual Entry">
+              {methods.map(m => <option key={m} value={m}>{m}</option>)}
+            </select>
+            <button type="submit">Book Measurement</button>
+          </form>
+
           {step === 0 && (
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-white mb-4">Choose Your Style</h2>
