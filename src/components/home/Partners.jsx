@@ -4,10 +4,14 @@ import { ScrollReveal } from '@/components/common/ScrollReveal';
 import { Skeleton } from '@/components/common/Skeleton';
 import { Lightbulb } from 'lucide-react';
 
+import monshaat from '@/assets/partners/monshaat.png';
+import vision2030 from '@/assets/partners/vision2030.png';
+import saudimade from '@/assets/partners/saudimade.png';
+
 const STATIC_PARTNERS = [
-  { displayName: 'Monshaat', logo: 'https://placehold.co/150x50/020402/C5A065?text=Monshaat', key: 'trust.monshaat' },
-  { displayName: 'Vision 2030', logo: 'https://placehold.co/150x50/020402/C5A065?text=Vision2030', key: 'trust.vision2030' },
-  { displayName: 'Saudi Made', logo: 'https://placehold.co/150x50/020402/C5A065?text=SaudiMade', key: 'trust.saudi_made' },
+  { displayName: 'Monshaat', logo: monshaat, key: 'trust.monshaat' },
+  { displayName: 'Vision 2030', logo: vision2030, key: 'trust.vision2030' },
+  { displayName: 'Saudi Made', logo: saudimade, key: 'trust.saudi_made' },
   { displayName: 'Fikra', logo: null, icon: Lightbulb, key: 'trust.fikra' }
 ];
 
@@ -61,6 +65,8 @@ export function Partners() {
                       <img
                         src={logoSrc}
                         alt={displayName}
+                        width="150"
+                        height="50"
                         className="h-full w-full object-contain max-h-12"
                       />
                     ) : Icon ? (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { sanityClient } from '@/sanityClient'
+import { sanityClient, isSanityConfigured } from '@/sanityClient'
 
 const query = /* groq */ `{
   "partners": *[_type == "partner"]{
@@ -24,10 +24,15 @@ const query = /* groq */ `{
 
 export function useHomeContent(locale = 'en') {
   const [data, setData] = useState({ partners: [], promoSlides: [], journeySteps: [] })
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(isSanityConfigured)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    if (!isSanityConfigured || !sanityClient) {
+      setIsLoading(false)
+      return
+    }
+
     let isMounted = true
     sanityClient
       .fetch(query)

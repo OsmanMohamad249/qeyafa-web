@@ -69,6 +69,8 @@ const Navbar = () => {
             <motion.img
               src={logo}
               alt="Qeyafa Logo"
+              width="40"
+              height="40"
               whileHover={{ scale: 1.05 }}
               className="h-10 w-auto object-contain"
             />

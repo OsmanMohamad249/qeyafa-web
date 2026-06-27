@@ -45,7 +45,7 @@ const Footer = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <img src={logo} alt="Qeyafa Logo" className="h-16 w-auto object-contain brightness-0 invert" />
+                <img src={logo} alt="Qeyafa Logo" className="h-16 w-auto object-contain brightness-0 invert" width="64" height="64" />
               </motion.div>
               <p className="text-text-body/60 text-sm leading-relaxed max-w-xs">
                 {t('footer.tagline', 'Leading the fashion-tech transformation with AI precision and sustainable practices.')}
@@ -107,41 +107,17 @@ const Footer = () => {
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
              <div className="flex items-center gap-6">
-               <p className="text-text-body/40 text-xs">
+               <p className="text-text-body/60 text-xs">
                  &copy; {currentYear} Qeyafa Platform. All rights reserved.
                </p>
              </div>
              <div className="flex gap-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
                {/* Small Badges */}
-               <span className="text-xs font-bold text-gold/30 pointer-events-none">QEYAFA AI</span>
+               <span className="text-xs font-bold text-gold/60 pointer-events-none">QEYAFA AI</span>
              </div>
           </div>
         </div>
       </footer>
-      {/* FORCED ADMIN LINK FOR DIAGNOSTICS */}
-      <a
-         href="http://localhost:3333"
-         target="_blank"
-         rel="noopener noreferrer"
-         style={{
-           position: 'fixed',
-           bottom: '10px',
-           right: '10px',
-           backgroundColor: '#C5A065',
-           color: '#020402',
-           padding: '10px 20px',
-           borderRadius: '8px',
-           zIndex: 9999,
-           fontSize: '14px',
-           fontWeight: 'bold',
-           display: 'flex',
-           alignItems: 'center',
-           gap: '8px'
-         }}
-       >
-         <Lock size={16} />
-         Admin Login
-       </a>
     </>
   );
 };

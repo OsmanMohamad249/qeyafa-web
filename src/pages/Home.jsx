@@ -147,7 +147,7 @@ export default function Home() {
 					<ScrollReveal>
 						<div className="text-center space-y-4">
 							<p className="text-sm uppercase tracking-[0.4em] text-gold">{t('journey.title')}</p>
-							<h3 className="text-3xl md:text-5xl font-bold">{t('journey.subtitle')}</h3>
+							<h2 className="text-3xl md:text-5xl font-bold">{t('journey.subtitle')}</h2>
 						</div>
 					</ScrollReveal>
 					<JourneyStepper />
@@ -162,7 +162,7 @@ export default function Home() {
 							<div className="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-deep-teal/5" />
 							<div className="relative z-10 space-y-6">
 								<p className="text-sm uppercase tracking-[0.4em] text-gold">{t('cta_section.title')}</p>
-								<h4 className="text-4xl font-bold">{t('cta_section.desc')}</h4>
+								<h2 className="text-4xl font-bold">{t('cta_section.desc')}</h2>
 								<Link to="/book">
 									<MagneticButton size="lg" className="min-w-[220px] bg-deep-teal text-white">
 										{t('cta_section.button')}

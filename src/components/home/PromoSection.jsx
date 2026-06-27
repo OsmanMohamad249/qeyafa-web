@@ -5,7 +5,7 @@ import { MagneticButton } from '@/components/common/MagneticButton';
 import { useHomeContent } from '@/hooks/useHomeContent';
 import { Skeleton } from '@/components/common/Skeleton';
 
-const videoSrc = 'https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4';
+const videoSrc = null; // Removed external video that returns 403
 
 // Static fallback mimicking the dynamic structure
 const STATIC_SLIDES = [{
@@ -64,13 +64,11 @@ export function PromoSection() {
                  loop
                  playsInline
                  src={slide.videoUrl}
-               />
+               >
+                 <track kind="captions" />
+               </video>
             ) : (
-               <img
-                 src={slide.imageUrl}
-                 alt={titleText}
-                 className="w-full h-full object-cover opacity-70"
-               />
+               <div className="w-full h-full bg-gradient-to-br from-[#0b1411] via-[#115E59]/30 to-[#C5A065]/20" aria-hidden="true" />
             )}
 
             <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-qeyafa-primary/40" />
@@ -80,9 +78,9 @@ export function PromoSection() {
                 <p className="text-sm uppercase tracking-[0.4em] text-qeyafa-gold mb-4">
                   {t('hero.badge')}
                 </p>
-                <h3 className="text-3xl md:text-5xl font-bold max-w-3xl leading-tight">
+                <h2 className="text-3xl md:text-5xl font-bold max-w-3xl leading-tight">
                   {titleText} {highlightText}
-                </h3>
+                </h2>
                 <p className="text-white/70 mt-6 max-w-2xl">
                   {subtitleText}
                 </p>
