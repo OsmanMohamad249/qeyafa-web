@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.webp';
 
 const SplashScreen = ({ onComplete }) => {
   const { t } = useTranslation();
