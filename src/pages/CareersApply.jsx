@@ -77,8 +77,8 @@ const CareersApply = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30 py-24 px-4">
       <SEO
-        title="Careers"
-        description="Join Qeyafa's team. Apply for exciting roles in AI, fashion technology, and custom tailoring innovation. Build the future of fashion with us."
+        titleKey="seo.careers.title"
+        descriptionKey="seo.careers.description"
         path="/careers"
       />
       <div className="max-w-4xl mx-auto">

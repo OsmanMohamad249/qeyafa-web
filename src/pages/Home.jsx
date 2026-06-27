@@ -54,8 +54,8 @@ export default function Home() {
 	return (
 		<div ref={containerRef} className="min-h-screen bg-background text-text-body overflow-hidden">
 			<SEO
-				title="AI-Powered Custom Tailoring Technology"
-				description="Transform your fashion experience with Qeyafa's AI technology. 95% accurate 3D body measurements from 2D photos. Custom tailoring made smart."
+				titleKey="seo.home.title"
+				descriptionKey="seo.home.description"
 				path="/"
 				jsonLd={organizationJsonLd}
 			/>

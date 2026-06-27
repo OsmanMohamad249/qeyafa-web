@@ -285,6 +285,56 @@
         "note": "No password required. This link is your secure key to the process."
       }
     },
+    "seo": {
+      "home": {
+        "title": "AI-Powered Custom Tailoring Technology",
+        "description": "Transform your fashion experience with Qeyafa's AI technology. 95% accurate 3D body measurements from 2D photos. Custom tailoring made smart."
+      },
+      "about": {
+        "title": "About Us",
+        "description": "Learn about Qeyafa's mission to revolutionize custom tailoring with AI. Our vision, values, and the team behind 95% accurate body measurements."
+      },
+      "services": {
+        "title": "Our Services",
+        "description": "Explore Qeyafa's AI-powered tailoring services. Individual custom tailoring, B2B corporate solutions, and advanced body measurement technology."
+      },
+      "individual": {
+        "title": "Individual Tailoring",
+        "description": "Get perfectly fitted custom garments with Qeyafa's AI body scanning. 95% accurate measurements from a simple 2D photo."
+      },
+      "corporate": {
+        "title": "Corporate Solutions",
+        "description": "Streamline your corporate uniform process with AI sizing and automated logistics. One platform for all employee measurements."
+      },
+      "hub": {
+        "title": "Qeyafa Hub",
+        "description": "Explore Qeyafa's ecosystem hub. Connect as a customer, business partner, tailor, or supplier in our AI-powered tailoring platform."
+      },
+      "partners": {
+        "title": "Partner Hub",
+        "description": "Join Qeyafa's partner network. Access orders, manage your tailoring business, and grow with AI-powered tools."
+      },
+      "suppliers": {
+        "title": "Supplier Hub",
+        "description": "Digitize your fabric inventory and connect directly with customers and tailors through Qeyafa's platform."
+      },
+      "book": {
+        "title": "Book a Measurement",
+        "description": "Book your AI body measurement session with Qeyafa. Choose your style, get precise 3D measurements, and start your custom tailoring experience."
+      },
+      "qtme": {
+        "title": "QTME Technology",
+        "description": "Discover QTME, Qeyafa's AI-powered tailoring measurement engine. Join our team of innovators building the future of fashion technology."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "Get in touch with Qeyafa for custom tailoring solutions, partnerships, or inquiries about our AI-powered fashion technology."
+      },
+      "careers": {
+        "title": "Careers",
+        "description": "Join Qeyafa's team. Apply for exciting roles in AI, fashion technology, and custom tailoring innovation."
+      }
+    },
     "application_form": {
       "steps": {
         "personal": "Personal",

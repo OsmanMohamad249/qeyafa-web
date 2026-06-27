@@ -28,8 +28,8 @@ const IndividualTailoring = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
       <SEO
-        title="Individual Tailoring"
-        description="Get perfectly fitted custom garments with Qeyafa's AI body scanning. 95% accurate measurements from a simple 2D photo. Private, fast, and precise."
+        titleKey="seo.individual.title"
+        descriptionKey="seo.individual.description"
         path="/services/individual"
       />
       {/* Hero Section */}

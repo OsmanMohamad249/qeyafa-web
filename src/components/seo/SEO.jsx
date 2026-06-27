@@ -1,24 +1,36 @@
 import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
 
 const SITE_URL = 'https://qeyafa.com'
 const SITE_NAME = 'Qeyafa'
+const SITE_NAME_AR = 'قيافة'
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`
 
 export function SEO({
-  title,
-  description,
+  titleKey,
+  descriptionKey,
+  title: titleOverride,
+  description: descOverride,
   path = '',
   image = DEFAULT_IMAGE,
   type = 'website',
   jsonLd,
   children
 }) {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} - AI-Powered Custom Tailoring`
+  const { t, i18n } = useTranslation()
+  const isArabic = i18n.language === 'ar'
+  const siteName = isArabic ? SITE_NAME_AR : SITE_NAME
+
+  const title = titleOverride || (titleKey ? t(titleKey) : '')
+  const description = descOverride || (descriptionKey ? t(descriptionKey) : '')
+
+  const fullTitle = title ? `${title} | ${siteName}` : `${siteName} - ${isArabic ? 'تقنية الخياطة المخصصة بالذكاء الاصطناعي' : 'AI-Powered Custom Tailoring'}`
   const canonicalUrl = `${SITE_URL}${path}`
 
   return (
     <Helmet>
       {/* Basic */}
+      <html lang={isArabic ? 'ar' : 'en'} dir={isArabic ? 'rtl' : 'ltr'} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
@@ -29,10 +41,10 @@ export function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:site_name" content={siteName} />
       <meta property="og:image" content={image} />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:locale:alternate" content="ar_SA" />
+      <meta property="og:locale" content={isArabic ? 'ar_SA' : 'en_US'} />
+      <meta property="og:locale:alternate" content={isArabic ? 'en_US' : 'ar_SA'} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

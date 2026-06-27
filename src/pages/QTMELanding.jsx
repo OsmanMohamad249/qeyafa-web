@@ -48,8 +48,8 @@ const QTMELanding = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
       <SEO
-        title="QTME Technology"
-        description="Discover Qeyafa's QTME - the AI engine behind accurate 3D body measurements. Join our team and help revolutionize the fashion technology industry."
+        titleKey="seo.qtme.title"
+        descriptionKey="seo.qtme.description"
         path="/qtme"
       />
       {/* Hero Section */}

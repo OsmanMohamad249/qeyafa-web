@@ -34,8 +34,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern pt-24 pb-16">
       <SEO
-        title="Services"
-        description="Explore Qeyafa's AI-powered tailoring services. Individual custom tailoring, B2B corporate solutions, and advanced body measurement technology."
+        titleKey="seo.services.title"
+        descriptionKey="seo.services.description"
         path="/services"
         jsonLd={serviceJsonLd}
       />

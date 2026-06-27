@@ -30,8 +30,8 @@ const PartnerLanding = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
       <SEO
-        title="Partner Hub"
-        description="Join Qeyafa's partner network. Access orders, manage your tailoring business, and grow with AI-powered tools designed for tailors and artisans."
+        titleKey="seo.partners.title"
+        descriptionKey="seo.partners.description"
         path="/hub/partners"
       />
       {/* Hero Section */}

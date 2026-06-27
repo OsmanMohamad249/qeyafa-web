@@ -92,8 +92,8 @@ const HubLanding = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
       <SEO
-        title="Qeyafa Hub"
-        description="Explore Qeyafa's ecosystem hub. Connect as a customer, business partner, tailor, or supplier. AI-powered tailoring platform for everyone."
+        titleKey="seo.hub.title"
+        descriptionKey="seo.hub.description"
         path="/hub"
       />
       {/* Hero Section */}

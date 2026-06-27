@@ -34,8 +34,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30">
       <SEO
-        title="About Us"
-        description="Learn about Qeyafa's mission to revolutionize custom tailoring with AI technology. Our vision, values, and the team behind 95% accurate body measurements."
+        titleKey="seo.about.title"
+        descriptionKey="seo.about.description"
         path="/about"
       />
       {/* Hero Section */}

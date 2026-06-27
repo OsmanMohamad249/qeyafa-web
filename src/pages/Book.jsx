@@ -18,8 +18,8 @@ const Book = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern selection:bg-qeyafa-gold/30 py-24 px-4">
       <SEO
-        title="Book a Measurement"
-        description="Book your AI body measurement session with Qeyafa. Choose your style, get precise 3D measurements from a simple photo, and start your custom tailoring experience."
+        titleKey="seo.book.title"
+        descriptionKey="seo.book.description"
         path="/book"
       />
       <SEO

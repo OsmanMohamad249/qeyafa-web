@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-qeyafa-black bg-grid-pattern pt-24 pb-16">
       <SEO
-        title="Contact Us"
-        description="Get in touch with Qeyafa. Reach out for custom tailoring solutions, partnerships, or any inquiries about our AI-powered fashion technology."
+        titleKey="seo.contact.title"
+        descriptionKey="seo.contact.description"
         path="/contact"
       />
       {/* Background Effects */}
