@@ -1,0 +1,39 @@
+# Qeyafa - AI-Powered Custom Tailoring
+
+> Qeyafa is an innovative Saudi tech platform transforming fashion with AI-powered 3D body measurements from 2D photos, achieving 95% accuracy.
+
+## About
+
+Qeyafa merges traditional tailoring craftsmanship with cutting-edge Computer Vision and AI technology. Our platform connects customers, tailors, and fabric suppliers in one integrated ecosystem.
+
+## Services
+
+- **Individual Tailoring**: AI body scanning for perfectly fitted custom garments
+- **Corporate Solutions (B2B)**: Automated uniform management with remote AI measurement
+- **Partner Hub**: Network of skilled tailors receiving ready-to-sew orders
+- **Supplier Hub**: Digital fabric marketplace connecting suppliers with tailors and customers
+
+## Technology
+
+- Proprietary Computer Vision engine converts 2D photos into 3D parametric body models
+- 95% measurement accuracy from just 2 photos
+- 20+ precise measurement points
+- On-device processing for privacy and security
+
+## Links
+
+- Website: https://qeyafa.com
+- About: https://qeyafa.com/about
+- Services: https://qeyafa.com/services
+- Book Measurement: https://qeyafa.com/book
+- Partners: https://qeyafa.com/hub/partners
+- Careers: https://qeyafa.com/careers
+- Contact: https://qeyafa.com/contact
+
+## Languages
+
+Available in English and Arabic (العربية)
+
+## Location
+
+Saudi Arabia
