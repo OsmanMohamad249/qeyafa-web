@@ -7,7 +7,8 @@ import { ScrollReveal } from '@/components/common/ScrollReveal';
 import { SEO } from '@/components/seo/SEO';
 
 const PartnerLanding = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
 
   const features = [
     {
@@ -47,15 +48,15 @@ const PartnerLanding = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-display">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight">
               {t('partner_landing.hero.title')}
             </h1>
-            <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-10">
               {t('partner_landing.hero.subtitle')}
             </p>
-            <Link to="/hub/register" className="btn-luxury group inline-flex items-center">
+            <Link to="/hub/register" className="btn-luxury group">
               <span>{t('partner_landing.hero.cta')}</span>
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className={`w-5 h-5 transition-transform group-hover:translate-x-1 ${isRTL ? 'rotate-180' : ''}`} />
             </Link>
           </motion.div>
         </div>

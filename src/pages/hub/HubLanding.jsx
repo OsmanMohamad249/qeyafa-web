@@ -26,7 +26,8 @@ const Counter = ({ value, suffix = '' }) => {
 };
 
 const HubLanding = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
 
   const impactStats = [
     { label: t('home.impact.clients'), value: 10000, suffix: '+' },
@@ -117,7 +118,7 @@ const HubLanding = () => {
           >
             <Sparkles className="w-4 h-4 text-qeyafa-gold" fill="currentColor" />
             <span className="text-xs font-medium tracking-widest uppercase text-qeyafa-gold">
-              The Digital Fashion Ecosystem
+              {t('nav.hub')}
             </span>
           </motion.div>
 
@@ -126,33 +127,33 @@ const HubLanding = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold font-display mb-8 leading-tight text-white max-w-5xl"
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white max-w-4xl"
           >
             {t('home.hero.title')}
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.h2
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl sm:text-2xl md:text-3xl text-white/60 font-light mb-12 max-w-3xl"
+            className="text-lg md:text-2xl text-white/60 font-light mb-10 max-w-3xl"
           >
             {t('home.hero.subtitle')}
-          </motion.h2>
+          </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col md:flex-row gap-6 w-full md:w-auto justify-center mb-20"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
           >
             <Link to="/book" className="btn-luxury group">
               <span>{t('home.hero.cta')}</span>
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className={`w-5 h-5 transition-transform group-hover:translate-x-1 ${isRTL ? 'rotate-180' : ''}`} />
             </Link>
-            <Link to="/about" className="btn-outline border-white/20 hover:bg-white/5">
+            <Link to="/about" className="btn-outline">
               {t('home.hero.learnMore')}
             </Link>
           </motion.div>

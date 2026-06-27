@@ -51,10 +51,10 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-display">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight">
               {t('about.hero.title')}
             </h1>
-            <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
               {t('about.hero.subtitle')}
             </p>
           </motion.div>

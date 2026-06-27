@@ -216,6 +216,30 @@
         }
       }
     },
+    "individual_landing": {
+      "hero": {
+        "badge": "AI-Powered Technology",
+        "title": "Your Perfect Fit, Tailored by AI",
+        "subtitle": "Precision Meets Personal Style",
+        "description": "Get perfectly fitted custom garments with Qeyafa's AI body scanning. 95% accurate measurements from a simple photo — private, fast, and precise.",
+        "cta": "Book Your Measurement",
+        "learnMore": "Learn More"
+      },
+      "features": {
+        "accuracy": {
+          "title": "95% Accuracy",
+          "desc": "Precise body measurements from 2D photos"
+        },
+        "fast": {
+          "title": "Fast Processing",
+          "desc": "Get results in seconds with our AI engine"
+        },
+        "secure": {
+          "title": "On-Device Security",
+          "desc": "Your data stays private and secure"
+        }
+      }
+    },
     "corporate_landing": {
       "hero": {
         "title": "Employee Uniforms, Managed on Autopilot",

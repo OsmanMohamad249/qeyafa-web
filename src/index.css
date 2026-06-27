@@ -82,6 +82,12 @@
   --color-deep-teal: #115E59;
   --color-text-body: #E5E7EB;
 
+  /* Qeyafa brand aliases (used across all pages) */
+  --color-qeyafa-gold: #C5A065;
+  --color-qeyafa-primary: #C5A065;
+  --color-qeyafa-secondary: #115E59;
+  --color-qeyafa-black: #020402;
+
   /* Font Family */
   --font-sans: 'Thmanyah Sans', system-ui, sans-serif;
   --font-display: 'Thmanyah Display', 'Thmanyah Sans', system-ui, sans-serif;
@@ -213,6 +219,24 @@
   /* CTA Button */
   .btn-cta {
     @apply bg-deep-teal text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:brightness-110;
+  }
+
+  /* Primary luxury button (gold) */
+  .btn-luxury {
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-4 rounded-xl
+           bg-qeyafa-gold text-qeyafa-black font-bold
+           transition-all duration-300
+           hover:bg-white hover:shadow-[0_10px_40px_rgba(197,160,101,0.3)];
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-4 rounded-xl
+           border border-white/20 text-white font-medium
+           transition-all duration-300
+           hover:bg-white/5 hover:border-white/40;
   }
 
   /* Luxury Card */
