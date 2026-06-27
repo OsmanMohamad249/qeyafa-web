@@ -17,7 +17,6 @@ const Footer = () => {
 
   const companyLinks = [
     { name: t('footer.links.about', 'About Us'), href: '/about' },
-    { name: t('nav.careers', 'Careers'), href: '/careers' },
     { name: t('footer.links.news', 'News/Blog'), href: '#' },
   ];
 

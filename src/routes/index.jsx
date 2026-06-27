@@ -7,18 +7,12 @@ const Home = lazy(() => import('@/pages/Home'))
 const About = lazy(() => import('@/pages/About'))
 const Services = lazy(() => import('@/pages/Services'))
 const Contact = lazy(() => import('@/pages/Contact'))
-const Apply = lazy(() => import('@/pages/Apply'))
-const Assessment = lazy(() => import('@/pages/Assessment'))
-const AdminDashboard = lazy(() => import('@/pages/admin/Dashboard'))
-const AgencyPortal = lazy(() => import('@/pages/agency/Portal'))
-const Status = lazy(() => import('@/pages/Status'))
 const PartnerLanding = lazy(() => import('@/pages/hub/PartnerLanding'))
 const SupplierLanding = lazy(() => import('@/pages/hub/SupplierLanding'))
 const HubLanding = lazy(() => import('@/pages/hub/HubLanding'))
 const PartnerRegister = lazy(() => import('@/pages/hub/PartnerRegister'))
 const CorporateLanding = lazy(() => import('@/pages/services/CorporateLanding'))
 const Book = lazy(() => import('@/pages/Book'))
-const CareersApply = lazy(() => import('@/pages/CareersApply'))
 const IndividualTailoring = lazy(() => import('@/pages/services/IndividualTailoring'))
 
 function Fallback() {
@@ -48,15 +42,7 @@ export function AppRoutes() {
           <Route path="/hub/suppliers" element={<SupplierLanding />} />
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/careers" element={<CareersApply />} />
-          <Route path="/careers/apply" element={<CareersApply />} />
-          <Route path="/apply/:jobId?" element={<Apply />} />
-          <Route path="/status/:token" element={<Status />} />
         </Route>
-
-        <Route path="/assessment/:token?" element={<Assessment />} />
-        <Route path="/admin/*" element={<AdminDashboard />} />
-        <Route path="/agency/*" element={<AgencyPortal />} />
       </Routes>
     </Suspense>
   )

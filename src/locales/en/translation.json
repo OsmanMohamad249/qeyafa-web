@@ -20,10 +20,8 @@
       "join_tailors": "For Tailors",
       "join_suppliers": "For Suppliers",
       "join_logistics": "For Logistics",
-      "careers": "Careers",
       "contact": "Contact",
-      "book_measurement": "Book a Measurement",
-      "qtme": "Careers"
+      "book_measurement": "Book a Measurement"
     },
     "hero": {
       "badge": "The Future of Digital Tailoring",
@@ -261,54 +259,6 @@
         }
       }
     },
-    "qtme": {
-      "hero": {
-        "title": "Welcome to QTME: The Engine Behind Qeyafa.",
-        "subtitle": "Where Silicon Valley Tech meets Saudi Heritage.",
-        "cta": "Access QTME Portal"
-      },
-      "roles": {
-        "title": "Founding Partner Opportunities",
-        "cto": {
-          "title": "Chief Technology Officer",
-          "desc": "Lead the Computer Vision Engine."
-        },
-        "coo": {
-          "title": "Chief Operating Officer",
-          "desc": "Orchestrate the Supply Chain."
-        },
-        "cmo": {
-          "title": "Chief Marketing Officer",
-          "desc": "Drive the Digital Growth."
-        }
-      },
-      "culture": {
-        "title": "Culture & DNA",
-        "innovation": {
-          "title": "Innovation",
-          "desc": "We don't just sew; we code."
-        },
-        "ownership": {
-          "title": "Ownership",
-          "desc": "Every team member is a partner."
-        },
-        "impact": {
-          "title": "Impact",
-          "desc": "Zero-waste fashion revolution."
-        }
-      }
-    },
-    "careers_apply": {
-      "title": "Join the Qeyafa Team",
-      "subtitle": "Qeyafa Talent Management Ecosystem",
-      "badge": "Career Application",
-      "success": {
-        "title": "Application Received",
-        "desc": "Your application has been successfully submitted. Use the magic link below to track your status at any time.",
-        "magic_link": "Your Magic Link",
-        "note": "No password required. This link is your secure key to the process."
-      }
-    },
     "seo": {
       "home": {
         "title": "AI-Powered Custom Tailoring Technology",
@@ -346,76 +296,9 @@
         "title": "Book a Measurement",
         "description": "Book your AI body measurement session with Qeyafa. Choose your style, get precise 3D measurements, and start your custom tailoring experience."
       },
-      "qtme": {
-        "title": "QTME Technology",
-        "description": "Discover QTME, Qeyafa's AI-powered tailoring measurement engine. Join our team of innovators building the future of fashion technology."
-      },
       "contact": {
         "title": "Contact Us",
         "description": "Get in touch with Qeyafa for custom tailoring solutions, partnerships, or inquiries about our AI-powered fashion technology."
-      },
-      "careers": {
-        "title": "Careers",
-        "description": "Join Qeyafa's team. Apply for exciting roles in AI, fashion technology, and custom tailoring innovation."
-      }
-    },
-    "application_form": {
-      "steps": {
-        "personal": "Personal",
-        "professional": "Professional",
-        "portfolio": "Portfolio",
-        "cv": "CV Upload"
-      },
-      "personal": {
-        "title": "Personal Information",
-        "full_name": "Full Name",
-        "email": "Email Address",
-        "phone": "Phone Number"
-      },
-      "professional": {
-        "title": "Professional Details",
-        "current_salary": "Current Salary (Monthly)",
-        "expected_salary": "Expected Salary (Monthly)",
-        "currency": "Currency",
-        "notice_period": "Notice Period (Days)",
-        "notice_options": {
-          "immediate": "Immediate",
-          "days_15": "15 Days",
-          "days_30": "30 Days",
-          "days_60": "60 Days",
-          "days_90": "90 Days"
-        }
-      },
-      "portfolio": {
-        "title": "Links & Portfolio",
-        "subtitle": "Optional but highly recommended",
-        "github": "GitHub URL",
-        "linkedin": "LinkedIn URL",
-        "portfolio": "Portfolio URL"
-      },
-      "cv": {
-        "title": "Upload Your CV",
-        "drag_drop": "Drag & drop your CV here",
-        "browse": "or click to browse (PDF, max 5MB)",
-        "change": "Click to change file"
-      },
-      "buttons": {
-        "next": "Next Step",
-        "prev": "Previous",
-        "submit": "Submit Application",
-        "submitting": "Submitting..."
-      },
-      "errors": {
-        "name_required": "Name is required",
-        "email_required": "Email is required",
-        "email_invalid": "Invalid email format",
-        "phone_required": "Phone is required",
-        "current_salary_required": "Current salary is required",
-        "expected_salary_required": "Expected salary is required",
-        "pdf_only": "Please upload a PDF file",
-        "file_size": "File size must be less than 5MB",
-        "cv_required": "Please upload your CV",
-        "submit_failed": "Failed to submit application. Please try again."
       }
     }
   }

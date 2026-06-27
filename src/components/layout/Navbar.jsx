@@ -48,7 +48,6 @@ const Navbar = () => {
         { name: t('nav.hub_suppliers'), path: '/hub/suppliers' },
       ]
     },
-    { name: t('nav.careers'), path: '/careers' },
   ];
 
   return (
